@@ -10,12 +10,15 @@ const canonical = new URL(Astro.url.pathname, Astro.site || 'https://stitchandsp
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="deployment-check" content="github-cloudflare-2026-06-21-0324-utc" />
+    <meta name="deployment-check" content="github-cloudflare-2026-06-21-0549-utc" />
     <link rel="canonical" href={canonical} />
   </head>
   <body>
     <header class="site-header">
-      <a href="/" class="brand" aria-label="Stitch and Spec home"><span class="brand-mark">S</span><span>Stitch <em>&amp;</em> Spec</span></a>
+      <a href="/" class="brand" aria-label="Stitch and Spec home">
+        <span class="brand-mark" aria-hidden="true">S</span>
+        <span class="brand-name">Stitch <em>&amp;</em> Spec</span>
+      </a>
       <nav aria-label="Primary navigation">
         <a href="/research-graph/">Research map</a>
         <a href="/best-sewing-embroidery-machine-for-beginners/">Beginner guide</a>

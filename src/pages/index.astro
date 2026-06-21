@@ -3,47 +3,60 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { researchPages } from '../data/pages';
 const featured = researchPages.filter((page) => ['best-sewing-embroidery-machine-for-beginners','embroidery-hoop-size-explained','brother-se700-vs-se2000','what-supplies-do-you-need-for-machine-embroidery','sewing-machine-for-denim-and-canvas','embroidery-machine-for-small-business'].includes(page.slug));
 const clusters = Object.groupBy(researchPages, (page) => page.cluster);
+const heroLabels = ['Hoop boundary', 'Stitch path', 'Machine photo slot'];
 ---
 <BaseLayout title="Stitch & Spec | Sewing and Embroidery Machine Research" description="Clear sewing and embroidery machine buying guidance, comparison tables, and project-first research for real buyers.">
-  <section class="hero home-hero">
+  <section class="home-hero" aria-labelledby="home-title">
     <div class="hero-copy">
-      <p class="kicker">Independent sewing machine research</p>
-      <h1>Choose the right sewing or embroidery machine for the work you actually make.</h1>
-      <p class="lead">Stitch & Spec turns confusing machine specs into practical buyer decisions: hoop size, fabric handling, stitch control, stabilizers, software, service access, and upgrade risk.</p>
+      <p class="site-note">Independent machine research for the work on your table</p>
+      <h1 id="home-title">Choose the machine for the thing you actually make.</h1>
+      <p class="lead">Stitch &amp; Spec translates sewing and embroidery specs into practical buyer decisions: hoop size, fabric handling, stitch control, stabilizers, service access, and upgrade risk.</p>
       <div class="hero-actions">
         <a class="button primary" href="/best-sewing-embroidery-machine-for-beginners/">Start with the beginner guide</a>
-        <a class="button secondary" href="/research-graph/">Browse the research map</a>
+        <a class="button secondary" href="/research-graph/">Browse every buyer question</a>
       </div>
     </div>
-    <aside class="hero-panel" aria-label="Research promise">
-      <span class="panel-label">How we evaluate</span>
-      <ul>
-        <li>Project fit before brand hype</li>
-        <li>Decision tables over vague rankings</li>
-        <li>Source trails and update dates</li>
-        <li>Clear next questions for each buyer path</li>
-      </ul>
-    </aside>
+    <figure class="image-slot hero-image-slot" aria-label="Placeholder for a sewing and embroidery machine hero photograph">
+      <div class="slot-stage">
+        <span class="slot-badge">Photo slot</span>
+        <span class="machine-block machine-arm"></span>
+        <span class="machine-block machine-bed"></span>
+        <span class="machine-block hoop-window"></span>
+        <span class="stitch-path"></span>
+        {heroLabels.map((label) => <span class="slot-pin">{label}</span>)}
+      </div>
+      <figcaption>Replace with a real machine, hoop, or fabric-workbench photo when assets are ready.</figcaption>
+    </figure>
   </section>
 
-  <section class="section-block">
+  <section class="section-block guide-block" aria-labelledby="start-guides">
     <div class="section-heading-row">
-      <p class="kicker">Start here</p>
-      <h2>Most useful guides for first-time buyers</h2>
+      <p class="section-note">Start by the project</p>
+      <h2 id="start-guides">Most useful guides for first-time buyers</h2>
+      <p>These entries are organized around the decision a buyer is actually trying to make, not around brand hype or spec-sheet trivia.</p>
     </div>
-    <div class="grid feature-grid">
-      {featured.map((page) => <a class="card feature-card" href={`/${page.slug}/`}><span class="card-cluster">{page.cluster.replaceAll('-', ' ')}</span><strong>{page.title}</strong><span>{page.bluf}</span></a>)}
+    <div class="guide-list">
+      {featured.map((page) => (
+        <a class="guide-row" href={`/${page.slug}/`}>
+          <span class="guide-thumb image-slot" aria-hidden="true"><span>{page.cluster.replaceAll('-', ' ')}</span></span>
+          <span class="guide-text">
+            <span class="guide-meta">{page.cluster.replaceAll('-', ' ')} · updated {page.lastUpdated}</span>
+            <strong>{page.title}</strong>
+            <span>{page.bluf}</span>
+          </span>
+        </a>
+      ))}
     </div>
   </section>
 
-  <section class="section-block warm-panel">
+  <section class="section-block path-block" aria-labelledby="buyer-paths">
     <div class="section-heading-row">
-      <p class="kicker">Buyer paths</p>
-      <h2>Find the guide that matches your project</h2>
+      <p class="section-note">Buyer paths</p>
+      <h2 id="buyer-paths">Find the guide that matches the material, machine, or mistake you are trying to avoid.</h2>
     </div>
-    <div class="cluster-list">
+    <div class="cluster-shelves">
       {Object.entries(clusters).map(([cluster, pages]) => (
-        <section class="cluster-card">
+        <section class="cluster-shelf">
           <h3>{cluster.replaceAll('-', ' ')}</h3>
           <ul>{pages?.slice(0, 5).map((page) => <li><a href={`/${page.slug}/`}>{page.title}</a></li>)}</ul>
         </section>

@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { researchPages } from '../data/pages';
+import { merchants } from '../data/affiliates';
+---
+<BaseLayout title="Stitch & Spec | Sewing and Embroidery Machine Research">
+  <section class="hero">
+    <p class="eyebrow">Evolen prototype · citation-ready buyer research</p>
+    <h1>Sewing and embroidery machine answers without affiliate-blog noise.</h1>
+    <p class="lead">This site maps buyer questions into direct answers, comparison tables, source trails, and next-question links so search engines and AI systems can cite the clearest answer.</p>
+  </section>
+  <section>
+    <h2>Start with the buyer question map</h2>
+    <div class="grid">
+      {researchPages.slice(0, 12).map((page) => <a class="card" href={`/${page.slug}/`}><strong>{page.title}</strong><span>{page.buyerQuestion}</span></a>)}
+    </div>
+  </section>
+  <section>
+    <h2>Affiliate data layer status</h2>
+    <table>
+      <thead><tr><th>Merchant</th><th>Network</th><th>Commission</th><th>Cookie</th><th>Status</th></tr></thead>
+      <tbody>{merchants.map((m) => <tr><td>{m.name}</td><td>{m.network}</td><td>{m.commission}</td><td>{m.cookie}</td><td>{m.accessibility}</td></tr>)}</tbody>
+    </table>
+  </section>
+</BaseLayout>

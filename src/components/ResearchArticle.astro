@@ -1,0 +1,77 @@
+---
+const { page } = Astro.props;
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: page.faq.map((item) => ({ '@type': 'Question', name: item.q, acceptedAnswer: { '@type': 'Answer', text: item.a } }))
+};
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: page.title,
+  dateModified: page.lastUpdated,
+  about: page.buyerQuestion,
+  mainEntityOfPage: Astro.url.href
+};
+---
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+<article class="research-page">
+  <p class="eyebrow">{page.cluster} · Last updated {page.lastUpdated}</p>
+  <h1>{page.title}</h1>
+  <section class="bluf" aria-label="Direct answer">
+    <strong>BLUF:</strong> {page.bluf}
+  </section>
+  {page.recommendation && (
+    <section class="recommendation" aria-label="Recommendation">
+      <h2>Practical recommendation</h2>
+      <p>{page.recommendation}</p>
+    </section>
+  )}
+  <section>
+    <h2>What question does this answer?</h2>
+    <p>{page.buyerQuestion}</p>
+  </section>
+  {page.table ? (
+    <section>
+      <h2>Decision table</h2>
+      <table>
+        <thead><tr>{page.table.columns.map((column) => <th>{column}</th>)}</tr></thead>
+        <tbody>{page.table.rows.map((row) => <tr>{row.map((cell) => <td>{cell}</td>)}</tr>)}</tbody>
+      </table>
+    </section>
+  ) : (
+    <section>
+      <h2>Comparison points</h2>
+      <table>
+        <thead><tr><th>Factor</th><th>Why it matters</th></tr></thead>
+        <tbody>
+          {(page.comparisons?.length ? page.comparisons : ['price', 'project fit', 'service access']).map((factor) => (
+            <tr><td>{factor}</td><td>Use this factor to separate a useful machine choice from a spec-sheet-only choice.</td></tr>
+          ))}
+        </tbody>
+      </table>
+    </section>
+  )}
+  {page.sections?.map((section) => (
+    <section>
+      <h2>{section.heading}</h2>
+      <p>{section.body}</p>
+      {section.bullets && <ul>{section.bullets.map((bullet) => <li>{bullet}</li>)}</ul>}
+    </section>
+  ))}
+  <section>
+    <h2>What should you ask next?</h2>
+    <ul>
+      {page.nextQuestions.map((slug) => <li><a href={`/${slug}/`}>{slug.replaceAll('-', ' ')}</a></li>)}
+    </ul>
+  </section>
+  <section>
+    <h2>Sources used</h2>
+    <ul>{page.sources.map((source) => <li><a href={source.url}>{source.label}</a></li>)}</ul>
+  </section>
+  <section>
+    <h2>FAQ</h2>
+    {page.faq.map((item) => <details open><summary>{item.q}</summary><p>{item.a}</p></details>)}
+  </section>
+</article>

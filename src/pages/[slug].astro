@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ResearchArticle from '../components/ResearchArticle.astro';
+import { researchPages } from '../data/pages';
+export function getStaticPaths() {
+  return researchPages.map((page) => ({ params: { slug: page.slug }, props: { page } }));
+}
+const { page } = Astro.props;
+---
+<BaseLayout title={`${page.title} | Stitch & Spec`} description={page.bluf}>
+  <ResearchArticle page={page} />
+</BaseLayout>

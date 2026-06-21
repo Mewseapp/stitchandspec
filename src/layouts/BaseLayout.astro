@@ -1,0 +1,30 @@
+---
+import '../styles/global.css';
+const { title, description = 'Neutral, citation-ready sewing and embroidery machine research.' } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site || 'https://stitchandspec.com').toString();
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+  </head>
+  <body>
+    <header class="site-header">
+      <a href="/" class="brand">Stitch &amp; Spec</a>
+      <nav>
+        <a href="/research-graph/">Research graph</a>
+        <a href="/affiliate-disclosure/">Disclosure</a>
+        <a href="/editorial-policy/">Editorial policy</a>
+      </nav>
+    </header>
+    <main><slot /></main>
+    <footer>
+      <p>Affiliate disclosure: this research tool may earn commissions when approved affiliate links are added. Recommendations remain neutral and source-led.</p>
+      <p>Built for static HTML, Bing indexing, and AI-crawler readability.</p>
+    </footer>
+  </body>
+</html>

@@ -17,6 +17,10 @@ npm run build
 npm run preview
 ```
 
+## Deployment status
+
+GitHub-to-Cloudflare auto-deploy trigger commit: 2026-06-21 03:24:16 UTC.
+
 ## Cloudflare Pages build settings
 
 - Framework preset: Astro

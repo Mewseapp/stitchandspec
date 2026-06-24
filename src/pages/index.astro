@@ -2,8 +2,9 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { researchPages } from '../data/pages';
 const featured = researchPages.filter((page) => ['best-sewing-embroidery-machine-for-beginners','embroidery-hoop-size-explained','brother-se700-vs-se2000','what-supplies-do-you-need-for-machine-embroidery','sewing-machine-for-denim-and-canvas','embroidery-machine-for-small-business'].includes(page.slug));
+const [leadGuide, ...supportingGuides] = featured;
 const clusters = Object.groupBy(researchPages, (page) => page.cluster);
-const heroLabels = ['Hoop boundary', 'Stitch path', 'Machine photo slot'];
+const heroLabels = ['hoop clearance', 'fabric handling', 'upgrade risk'];
 ---
 <BaseLayout title="Stitch & Spec | Sewing and Embroidery Machine Research" description="Clear sewing and embroidery machine buying guidance, comparison tables, and project-first research for real buyers.">
   <section class="home-hero" aria-labelledby="home-title">
@@ -16,16 +17,16 @@ const heroLabels = ['Hoop boundary', 'Stitch path', 'Machine photo slot'];
         <a class="button secondary" href="/research-graph/">Browse every buyer question</a>
       </div>
     </div>
-    <figure class="image-slot hero-image-slot" aria-label="Placeholder for a sewing and embroidery machine hero photograph">
+    <figure class="image-slot hero-image-slot" aria-label="Compact sewing and embroidery decision diagram">
       <div class="slot-stage">
-        <span class="slot-badge">Photo slot</span>
+        <span class="slot-badge">Decision sketch</span>
         <span class="machine-block machine-arm"></span>
         <span class="machine-block machine-bed"></span>
         <span class="machine-block hoop-window"></span>
         <span class="stitch-path"></span>
         {heroLabels.map((label) => <span class="slot-pin">{label}</span>)}
       </div>
-      <figcaption>Replace with a real machine, hoop, or fabric-workbench photo when assets are ready.</figcaption>
+      <figcaption>A compact map of the specs that change real projects.</figcaption>
     </figure>
   </section>
 
@@ -33,19 +34,28 @@ const heroLabels = ['Hoop boundary', 'Stitch path', 'Machine photo slot'];
     <div class="section-heading-row">
       <p class="section-note">Start by the project</p>
       <h2 id="start-guides">Most useful guides for first-time buyers</h2>
-      <p>These entries are organized around the decision a buyer is actually trying to make, not around brand hype or spec-sheet trivia.</p>
+      <p>Begin with the decision that changes what you can make. The layout below gives the highest-risk beginner choice more space, then lets you scan quickly by project type.</p>
     </div>
-    <div class="guide-list">
-      {featured.map((page) => (
-        <a class="guide-row" href={`/${page.slug}/`}>
-          <span class="guide-thumb image-slot" aria-hidden="true"><span>{page.cluster.replaceAll('-', ' ')}</span></span>
+    <div class="guide-showcase">
+      {leadGuide && (
+        <a class="featured-guide" href={`/${leadGuide.slug}/`}>
+          <span class="guide-swatch" aria-hidden="true"><span>first choice</span></span>
           <span class="guide-text">
+            <span class="guide-meta">{leadGuide.cluster.replaceAll('-', ' ')} · updated {leadGuide.lastUpdated}</span>
+            <strong>{leadGuide.title}</strong>
+            <span>{leadGuide.bluf}</span>
+          </span>
+        </a>
+      )}
+      <div class="guide-secondary-list">
+        {supportingGuides.map((page, index) => (
+          <a class:list={["guide-brief", index === 1 && "wide-brief"]} href={`/${page.slug}/`}>
             <span class="guide-meta">{page.cluster.replaceAll('-', ' ')} · updated {page.lastUpdated}</span>
             <strong>{page.title}</strong>
             <span>{page.bluf}</span>
-          </span>
-        </a>
-      ))}
+          </a>
+        ))}
+      </div>
     </div>
   </section>
 

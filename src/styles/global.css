@@ -8,7 +8,8 @@
   --muted:oklch(38% 0.03 270);
   --thread-red:oklch(55% 0.155 23);
   --brass:oklch(68% 0.115 87);
-  --brass-deep:oklch(43% 0.095 87);
+  --brass-deep:oklch(68% 0.115 87);
+  --color-system-version:homepage-approved-light-2026-06-24;
   --surface:oklch(99% 0.006 286);
   --surface-quiet:oklch(93.5% 0.018 286);
   --surface-tint:oklch(97.5% 0.017 286);

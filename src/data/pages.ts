@@ -67,7 +67,7 @@ export const researchPages: ResearchPage[] = [
   },
   {
     slug: 'brother-se700-vs-se2000', title: 'Brother SE700 vs SE2000',
-    bluf: 'The Brother SE700 is the lower-cost learning choice with a 4 x 4 inch embroidery field; the SE2000 class is the more flexible choice because 5 x 7 inch embroidery fits more real projects. Choose the SE700 to learn cheaply, and choose the SE2000-style step-up if shirts, gifts, and fewer hoop-size limits matter.',
+    bluf: 'The Brother SE700 is the lower-cost learning choice with a 4 x 4 inch embroidery field; the SE2000 class is the more flexible choice because 5 x 7 inch embroidery fits more real projects. Choose the SE700 to learn cost-consciously, and choose the SE2000-style step-up if shirts, gifts, and fewer hoop-size limits matter.',
     buyerQuestion: 'Should I buy the Brother SE700 or SE2000?', intent: 'compare', cluster: 'product-comparisons', lastUpdated: '2026-06-20',
     recommendation: 'Pick SE700 only when the price difference matters more than field size. Pick the SE2000 class when the buyer already knows they want a wider range of embroidery projects.',
     table: { columns: ['Factor','Brother SE700','Brother SE2000 class'], rows: [
@@ -79,7 +79,7 @@ export const researchPages: ResearchPage[] = [
     sections: [
       { heading: 'The field-size difference is the practical difference', body: 'For beginners, a 4 x 4 field is not automatically wrong. It is just narrow. The SE700 is attractive because Brother publicly lists a real combo feature set: 135 built-in embroidery designs, 103 stitches, wireless LAN, and a 4 x 4 field. The SE2000 class is attractive because the larger 5 x 7 field gives the buyer more usable project space.' },
       { heading: 'Who should choose the SE700?', body: 'Choose the SE700 if the goal is to learn embroidery mechanics: hooping, stabilizer, thread, needles, USB or wireless transfer, and design placement. It is a rational starter if the buyer accepts the field limitation.' },
-      { heading: 'Who should step up?', body: 'Step up if the intended projects are shirts, larger patches, gifts, or early small-business testing. Paying for a larger field can be cheaper than buying a 4 x 4 machine and replacing it quickly.' }
+      { heading: 'Who should step up?', body: 'Step up if the intended projects are shirts, larger patches, gifts, or early small-business testing. Paying for a larger field can be lower in total cost than buying a 4 x 4 machine and replacing it quickly.' }
     ],
     comparisons: ['price', 'hoop size', 'screen/interface', 'project fit'], sources: [{ label: 'Brother SE700 official product page', url: 'https://www.brother-usa.com/products/se700' }, { label: 'Brother sewing and embroidery category', url: 'https://www.brother-usa.com/home/sewing-embroidery' }, { label: 'SE2000 retailer listing example with 5 x 7 field', url: 'https://americansewingmachine.net/product/brother-se2000-sewing-machine/' }],
     nextQuestions: ['embroidery-hoop-size-explained','best-sewing-embroidery-machine-for-beginners','what-supplies-do-you-need-for-machine-embroidery'], faq: [
@@ -120,11 +120,11 @@ export const researchPages: ResearchPage[] = [
       ['Production volume','Commercial setup plus service plan','Downtime and service access become revenue issues.']
     ]},
     sections: [
-      { heading: 'The machine is only one part of the business system', body: 'Small-business embroidery depends on digitizing, hooping, stabilizer choice, thread inventory, placement consistency, order workflow, and realistic pricing. A cheap machine can validate the idea, but it does not remove labor from the process.' },
+      { heading: 'The machine is only one part of the business system', body: 'Small-business embroidery depends on digitizing, hooping, stabilizer choice, thread inventory, placement consistency, order workflow, and realistic pricing. A lower-cost machine can validate the idea, but it does not remove labor from the process.' },
       { heading: 'Single-needle machines validate, multi-needle machines produce', body: 'A single-needle machine can make sellable items, but every color change and re-hoop takes attention. Multi-needle machines cost more but reduce repetitive labor when the same logo or product is stitched again and again.' },
-      { heading: 'Service access matters more in business use', body: 'For hobby use, downtime is annoying. For business use, downtime blocks revenue. Buyers should consider dealer access, warranty handling, parts availability, and whether the machine can be serviced locally.' }
+      { heading: 'Service access matters more in business use', body: 'For hobby use, downtime is annoying. For business use, downtime blocks revenue. Buyers should consider service shop access, warranty handling, parts availability, and whether the machine can be serviced locally.' }
     ],
-    comparisons: ['single-needle', 'multi-needle', 'commercial embroidery'], sources: [{ label: 'Brother sewing and embroidery category', url: 'https://www.brother-usa.com/home/sewing-embroidery' }, { label: 'Sewing Machines Plus commercial and embroidery categories', url: 'https://sewingmachinesplus.com/' }, { label: 'Brother support resources', url: 'https://www.brother-usa.com/support' }], nextQuestions: ['embroidery-hoop-size-explained','embroidery-machine-for-hats','embroidery-software-for-beginners'], faq: [
+    comparisons: ['single-needle', 'multi-needle', 'commercial embroidery'], sources: [{ label: 'Brother sewing and embroidery category', url: 'https://www.brother-usa.com/home/sewing-embroidery' }, { label: 'Sewing Machines Plus commercial and embroidery categories', url: 'https://sewingmachinesplus.com/' }, { label: 'Brother support resources', url: 'https://www.brother-usa.com/contact-us' }], nextQuestions: ['embroidery-hoop-size-explained','embroidery-machine-for-hats','embroidery-software-for-beginners'], faq: [
       { q: 'Can you start with a single-needle machine?', a: 'Yes, for validation and low-volume products. Upgrade when thread changes, hooping time, and repeat orders become the bottleneck.' },
       { q: 'Should a beginner buy a multi-needle machine immediately?', a: 'Only if there is already validated demand, budget, training time, and service support. Otherwise, learn on a lower-risk setup.' }
     ]
@@ -335,7 +335,7 @@ researchPages.push(
     buyerQuestion: 'What embroidery thread type is best?', intent: 'learn', cluster: 'embroidery-basics', lastUpdated: '2026-06-21',
     recommendation: 'Start with quality 40-weight polyester embroidery thread in a small palette. Add rayon, cotton, or metallic only when the project specifically needs that finish.',
     table: { columns: ['Thread type','Best use','Watch-out'], rows: [
-      ['Polyester embroidery thread','Shirts, towels, bags, kids items, washable gifts','Cheap thread can still shred; buy reputable spools.'],
+      ['Polyester embroidery thread','Shirts, towels, bags, kids items, washable gifts','Lower-cost thread can still shred; buy reputable spools.'],
       ['Rayon embroidery thread','High-sheen decorative work','Less abrasion and bleach resistance than polyester.'],
       ['Cotton embroidery thread','Matte heirloom or vintage-style work','More lint and less shine; not the default for dense designs.'],
       ['Metallic thread','Accents, holiday designs, decorative details','Needs slower speed, correct needle, and careful tension.']
@@ -366,7 +366,7 @@ researchPages.push(
       { heading: 'Hoop preview is the first useful feature', body: 'The software should show whether a design fits the machine’s field. This matters especially for 4 x 4 machines, because many purchased designs assume larger hoops.' },
       { heading: 'Wireless apps do not replace understanding files', body: 'Brother’s newer machines and Artspira-style workflows can simplify transfer, but buyers still need to understand hoop size, file type, and design density.' }
     ],
-    sources: [{ label: 'Brother SE700 product page references wireless LAN and design transfer ecosystem', url: 'https://www.brother-usa.com/products/se700' }, { label: 'Brother support resources', url: 'https://www.brother-usa.com/support' }],
+    sources: [{ label: 'Brother SE700 product page references wireless LAN and design transfer ecosystem', url: 'https://www.brother-usa.com/products/se700' }, { label: 'Brother support resources', url: 'https://www.brother-usa.com/contact-us' }],
     nextQuestions: ['embroidery-file-formats','embroidery-hoop-size-explained','brother-se700-vs-se2000'],
     faq: [{ q: 'Do I need digitizing software immediately?', a: 'No. Most beginners can start by stitching purchased or built-in designs and using basic editing/transfer tools.' }, { q: 'Can I resize embroidery designs freely?', a: 'Only modestly. Large resizing can change stitch density and cause poor results unless the design is recalculated properly.' }]
   },
@@ -386,7 +386,7 @@ researchPages.push(
       { heading: 'Format does not override hoop size', body: 'A PES file can still be too large for a 4 x 4 machine. Buyers should confirm both the file type and the design dimensions before purchasing or transferring a design.' },
       { heading: 'Conversion has limits', body: 'Software can convert many embroidery formats, but conversion does not magically fix density, size, or poor digitizing. Test stitch important designs before using final blanks.' }
     ],
-    sources: [{ label: 'Brother support resources for machine-specific file handling', url: 'https://www.brother-usa.com/support' }, { label: 'Brother SE700 product page and transfer context', url: 'https://www.brother-usa.com/products/se700' }],
+    sources: [{ label: 'Brother support resources for machine-specific file handling', url: 'https://www.brother-usa.com/contact-us' }, { label: 'Brother SE700 product page and transfer context', url: 'https://www.brother-usa.com/products/se700' }],
     nextQuestions: ['embroidery-software-for-beginners','embroidery-hoop-size-explained','what-supplies-do-you-need-for-machine-embroidery'],
     faq: [{ q: 'Can I use a JPG or PNG on an embroidery machine?', a: 'Not directly. Artwork must be digitized into an embroidery stitch file before the machine can stitch it.' }, { q: 'Is PES the only Brother format?', a: 'PES is the common Brother home-machine format to look for first, but exact compatibility depends on the specific model and manual.' }]
   },
@@ -455,7 +455,7 @@ researchPages.push(
     slug: 'automatic-vs-computerized-sewing-machine', title: 'Mechanical vs Computerized Sewing Machine',
     bluf: 'Mechanical sewing machines are simpler, tactile, and often easier to understand; computerized machines add speed control, needle positioning, stitch menus, and convenience features. Choose mechanical for simplicity and budget, computerized for control features that help learning and precision.',
     buyerQuestion: 'Should I buy a mechanical or computerized sewing machine?', intent: 'compare', cluster: 'machine-types', lastUpdated: '2026-06-21',
-    recommendation: 'A beginner can succeed with either. If budget allows, computerized speed control and needle-down positioning are genuinely useful; if budget is tight, a solid mechanical machine is better than a cheap feature-heavy machine.',
+    recommendation: 'A beginner can succeed with either. If budget allows, computerized speed control and needle-down positioning are genuinely useful; if budget is tight, a solid mechanical machine is better than a lower-cost feature-heavy machine.',
     table: { columns: ['Factor','Mechanical','Computerized'], rows: [
       ['Controls','Dials and levers','Buttons, screen, stitch menus'],
       ['Learning feel','Tactile and simple','More features to learn but more precision options'],
@@ -485,11 +485,11 @@ researchPages.push(
       ['Professional service','Based on use and symptoms','Timing and internal adjustments require expertise.']
     ]},
     sections: [
-      { heading: 'Needle replacement is maintenance', body: 'Many stitch problems are caused by worn, bent, or wrong needles. Replacing the needle is cheap, fast, and should happen before assuming the machine needs repair.' },
+      { heading: 'Needle replacement is maintenance', body: 'Many stitch problems are caused by worn, bent, or wrong needles. Replacing the needle is lower-cost, fast, and should happen before assuming the machine needs repair.' },
       { heading: 'Lint builds up invisibly', body: 'Fuzzy fabric, thread, and batting can leave lint around the bobbin case and feed area. Cleaning visible lint helps prevent feed and stitch issues.' },
       { heading: 'Manuals matter for oiling', body: 'Older machines may require oiling; many modern machines are not user-oiled in the same way. The buyer should follow the exact model manual rather than generic internet advice.' }
     ],
-    sources: [{ label: 'Brother support resources', url: 'https://www.brother-usa.com/support' }, { label: 'Brother fabric/thread/needle guidance', url: 'https://help.brother-usa.com/app/answers/detail/a_id/144041/~/combination-of-fabric,-thread,-and-needle-to-use' }],
+    sources: [{ label: 'Brother support resources', url: 'https://www.brother-usa.com/contact-us' }, { label: 'Brother fabric/thread/needle guidance', url: 'https://help.brother-usa.com/app/answers/detail/a_id/144041/~/combination-of-fabric,-thread,-and-needle-to-use' }],
     nextQuestions: ['sewing-machine-needle-sizes','sewing-machine-warranty-and-service','used-vs-new-sewing-machine'],
     faq: [{ q: 'Should I oil my sewing machine?', a: 'Only if the manual says to and shows where. Many modern machines should not be oiled generically by the user.' }]
   },
@@ -497,43 +497,43 @@ researchPages.push(
     slug: 'used-vs-new-sewing-machine', title: 'Used vs New Sewing Machine',
     bluf: 'A used sewing machine can be a better value if it is complete, serviced, and appropriate for your projects. A new machine is safer for beginners who need a warranty, return window, current accessories, and support.',
     buyerQuestion: 'Should I buy a used or new sewing machine?', intent: 'compare', cluster: 'buying', lastUpdated: '2026-06-21',
-    recommendation: 'Buy new if you are a first-time buyer without a technician or experienced sewist helping you inspect. Consider used when the machine is serviced, testable, and from a reputable dealer or owner.',
+    recommendation: 'Buy new if you are a first-time buyer without a technician or experienced sewist helping you inspect. Consider used when the machine is serviced, testable, and from a reputable service shop or owner.',
     table: { columns: ['Factor','Used machine','New machine'], rows: [
       ['Price','Often lower for better build quality','Higher upfront but predictable'],
-      ['Warranty','May be none or limited','Manufacturer/dealer support'],
+      ['Warranty','May be none or limited','Manufacturer/service shop support'],
       ['Accessories','Can be missing or hard to replace','Usually complete starter set'],
       ['Risk','Condition, timing, hidden damage','Lower if bought from reputable seller'],
       ['Best buyer','Experienced or has inspection help','Beginner who needs support']
     ]},
     sections: [
-      { heading: 'Used is best when condition is known', body: 'A high-quality used machine can outperform a cheap new one, but only if it is working properly. The buyer should test stitches, reverse, bobbin winding, feed, buttonholes if relevant, and accessory completeness.' },
+      { heading: 'Used is best when condition is known', body: 'A high-quality used machine can outperform a lower-cost new one, but only if it is working properly. The buyer should test stitches, reverse, bobbin winding, feed, buttonholes if relevant, and accessory completeness.' },
       { heading: 'New reduces uncertainty', body: 'A new machine gives a return window, warranty, manual, included feet, and easier support. That matters when the buyer cannot tell whether problems are user error or machine condition.' },
-      { heading: 'Dealer-used is different from mystery-used', body: 'A serviced used machine from a reputable dealer can be a strong middle ground. An untested marketplace machine may still be fine, but the risk is much higher.' }
+      { heading: 'service-shop used is different from mystery-used', body: 'A serviced used machine from a reputable service shop can be a strong middle ground. An untested marketplace machine may still be fine, but the risk is much higher.' }
     ],
-    sources: [{ label: 'Brother support resources', url: 'https://www.brother-usa.com/support' }, { label: 'Sewing Machines Plus service and machine categories', url: 'https://sewingmachinesplus.com/' }],
+    sources: [{ label: 'Brother support resources', url: 'https://www.brother-usa.com/contact-us' }, { label: 'Sewing Machines Plus service and machine categories', url: 'https://sewingmachinesplus.com/' }],
     nextQuestions: ['sewing-machine-warranty-and-service','automatic-vs-computerized-sewing-machine','sewing-machine-maintenance'],
     faq: [{ q: 'Is a vintage sewing machine better?', a: 'Sometimes, especially for straight stitching and durability. But beginners should consider parts, service access, missing accessories, and whether it fits current project needs.' }]
   },
   {
     slug: 'sewing-machine-warranty-and-service', title: 'Sewing Machine Warranty and Service',
-    bluf: 'Warranty and service access matter because sewing machines are mechanical tools that can need timing, adjustment, parts, and user support. A slightly less flashy machine from a serviceable brand or dealer can be the better long-term buy.',
+    bluf: 'Warranty and service access matter because sewing machines are mechanical tools that can need timing, adjustment, parts, and user support. A slightly less flashy machine from a serviceable brand or service shop can be the better long-term buy.',
     buyerQuestion: 'How important is warranty and service access?', intent: 'learn', cluster: 'buying', lastUpdated: '2026-06-21',
     recommendation: 'Before buying, check who handles warranty, where service happens, what parts/accessories are available, and whether local help exists. Do this before comparing decorative stitch counts.',
     table: { columns: ['Service factor','Why it matters','What to ask'], rows: [
-      ['Warranty handling','Determines support path after failure','Is warranty through dealer, manufacturer, or marketplace seller?'],
-      ['Local technician/dealer','Reduces downtime and shipping risk','Who can service this model near me?'],
+      ['Warranty handling','Determines support path after failure','Is warranty through service shop, manufacturer, or marketplace seller?'],
+      ['Local technician/service shop','Reduces downtime and shipping risk','Who can service this model near me?'],
       ['Parts/accessories','Keeps machine usable long term','Are feet, bobbins, hoops, and manuals easy to get?'],
       ['Return window','Protects beginners from bad fit','Can I return it after testing basic projects?'],
       ['Support documentation','Reduces user-error frustration','Is the manual and support page clear?']
     ]},
     sections: [
       { heading: 'A sewing machine is not a disposable gadget', body: 'Even a home sewing machine has moving parts, timing, tension, feed systems, needles, and accessories. Support matters because a machine can be technically fine but unusable to a beginner without help.' },
-      { heading: 'Dealer support can beat a lower price', body: 'A cheaper online listing may be less useful if warranty support is unclear or service requires expensive shipping. A dealer-backed purchase can be worth more when the buyer needs setup help or repairs.' },
+      { heading: 'service shop support can beat a lower price', body: 'A lower in total cost online listing may be less useful if warranty support is unclear or service requires expensive shipping. A service shop-backed purchase can be worth more when the buyer needs setup help or repairs.' },
       { heading: 'Accessory availability protects the purchase', body: 'Embroidery hoops, presser feet, bobbins, needles, manuals, and software support all affect the life of the machine. Check availability before buying an obscure model.' }
     ],
-    sources: [{ label: 'Brother support resources', url: 'https://www.brother-usa.com/support' }, { label: 'Sewing Machines Plus service and repair category', url: 'https://sewingmachinesplus.com/' }, { label: 'Quality Sewing service/support presence', url: 'https://www.qualitysewing.com/' }],
+    sources: [{ label: 'Brother support resources', url: 'https://www.brother-usa.com/contact-us' }, { label: 'Sewing Machines Plus service and repair category', url: 'https://sewingmachinesplus.com/' }, { label: 'Quality Sewing service/support presence', url: 'https://www.qualitysewing.com/' }],
     nextQuestions: ['used-vs-new-sewing-machine','sewing-machine-maintenance','best-sewing-embroidery-machine-for-beginners'],
-    faq: [{ q: 'Should I buy from a dealer or the cheapest listing?', a: 'If you are new, dealer support and clear warranty handling can be worth more than a small price difference.' }]
+    faq: [{ q: 'Should I buy from a service shop or the lowest-cost option listing?', a: 'If you are new, service shop support and clear warranty handling can be worth more than a small price difference.' }]
   }
 );
 
@@ -702,7 +702,7 @@ const expandedGeoUpdates: Record<string, Partial<ResearchPage>> = {
       },
       {
         "label": "Brother support resources for model manuals and operation help",
-        "url": "https://www.brother-usa.com/support"
+        "url": "https://www.brother-usa.com/contact-us"
       }
     ],
     "nextQuestions": [
@@ -822,7 +822,7 @@ const expandedGeoUpdates: Record<string, Partial<ResearchPage>> = {
       },
       {
         "q": "Can one beginner machine handle every cosplay material?",
-        "a": "No single beginner machine is ideal for all cosplay work. Vinyl, canvas, foam, and heavy layers may require a stronger machine or different feed system."
+        "a": "No single beginner machine is suitable for all cosplay work. Vinyl, canvas, foam, and heavy layers may require a stronger machine or different feed system."
       },
       {
         "q": "Should I buy a combo sewing and embroidery machine for cosplay?",
@@ -858,7 +858,7 @@ const expandedGeoUpdates: Record<string, Partial<ResearchPage>> = {
         ],
         [
           "Alteration side business",
-          "Serviceable machine from dealer-supported brand",
+          "Serviceable machine from service-shop-supported brand",
           "Downtime, parts, and local repair matter when work is paid."
         ]
       ]
@@ -874,7 +874,7 @@ const expandedGeoUpdates: Record<string, Partial<ResearchPage>> = {
       },
       {
         "heading": "Why do feet and accessories matter?",
-        "body": "Alteration work often needs a zipper foot, blind hem foot, buttonhole foot, overcasting or zigzag foot, and sometimes walking or even-feed help. Janome\u2019s warranty/support page directs buyers to authorized dealers for accessories, manuals, and parts, which is a reminder that accessory availability protects the purchase after the box is opened."
+        "body": "Alteration work often needs a zipper foot, blind hem foot, buttonhole foot, overcasting or zigzag foot, and sometimes walking or even-feed help. Janome\u2019s warranty/support page directs buyers to authorized service shops for accessories, manuals, and parts, which is a reminder that accessory availability protects the purchase after the box is opened."
       },
       {
         "heading": "How should buyers think about service?",
@@ -892,7 +892,7 @@ const expandedGeoUpdates: Record<string, Partial<ResearchPage>> = {
       },
       {
         "label": "Brother support resources",
-        "url": "https://www.brother-usa.com/support"
+        "url": "https://www.brother-usa.com/contact-us"
       },
       {
         "label": "Janome warranty and support page",
@@ -993,7 +993,7 @@ const expandedGeoUpdates: Record<string, Partial<ResearchPage>> = {
       },
       {
         "label": "Brother support resources",
-        "url": "https://www.brother-usa.com/support"
+        "url": "https://www.brother-usa.com/contact-us"
       }
     ],
     "nextQuestions": [
@@ -1078,7 +1078,7 @@ const expandedGeoUpdates: Record<string, Partial<ResearchPage>> = {
     "sources": [
       {
         "label": "Brother support resources for model-specific file handling",
-        "url": "https://www.brother-usa.com/support"
+        "url": "https://www.brother-usa.com/contact-us"
       },
       {
         "label": "Brother SE700 product page and 4 x 4 embroidery field",
@@ -1187,7 +1187,7 @@ const expandedGeoUpdates: Record<string, Partial<ResearchPage>> = {
       },
       {
         "label": "Brother support resources for model manuals",
-        "url": "https://www.brother-usa.com/support"
+        "url": "https://www.brother-usa.com/contact-us"
       }
     ],
     "nextQuestions": [
@@ -1246,7 +1246,7 @@ const expandedGeoUpdates: Record<string, Partial<ResearchPage>> = {
         ],
         [
           "Paid quilting service or high repeat volume",
-          "Longarm with dealer/service support",
+          "Longarm with service shop/service support",
           "Throughput, downtime, training, and support become business issues."
         ]
       ]
@@ -1339,11 +1339,11 @@ const expandedGeoUpdates: Record<string, Partial<ResearchPage>> = {
         [
           "Machine is missing feet, bobbin case, pedal, or manual",
           "Avoid or price as a repair project",
-          "Missing parts can make a cheap machine expensive."
+          "Missing parts can make a lower-cost machine expensive."
         ],
         [
-          "Dealer-serviced used machine is available",
-          "Consider dealer-used",
+          "service-shop-serviced used machine is available",
+          "Consider service-shop used",
           "Service history and support reduce the risk of mystery problems."
         ]
       ]
@@ -1363,13 +1363,13 @@ const expandedGeoUpdates: Record<string, Partial<ResearchPage>> = {
       },
       {
         "heading": "Why do parts and service change the value?",
-        "body": "A low used price can disappear if the machine needs a pedal, bobbin case, proprietary feet, missing hoops, timing service, or unavailable parts. Janome directs buyers to authorized dealers for accessories, manuals, and parts; Brother also maintains support by model. A used machine without support is harder to recommend to a confused buyer."
+        "body": "A low used price can disappear if the machine needs a pedal, bobbin case, proprietary feet, missing hoops, timing service, or unavailable parts. Janome directs buyers to authorized service shops for accessories, manuals, and parts; Brother also maintains support by model. A used machine without support is harder to recommend to a confused buyer."
       }
     ],
     "sources": [
       {
         "label": "Brother support resources and manuals",
-        "url": "https://www.brother-usa.com/support"
+        "url": "https://www.brother-usa.com/contact-us"
       },
       {
         "label": "Janome warranty/support page for accessories, manuals, and parts",
@@ -1400,7 +1400,7 @@ const expandedGeoUpdates: Record<string, Partial<ResearchPage>> = {
       },
       {
         "q": "Should beginners avoid used machines?",
-        "a": "Not always, but beginners should avoid untested machines unless someone experienced can inspect them or a dealer has serviced them."
+        "a": "Not always, but beginners should avoid untested machines unless someone experienced can inspect them or a service shop has serviced them."
       },
       {
         "q": "What missing parts are expensive problems?",
@@ -1448,11 +1448,11 @@ const expandedGeoUpdates: Record<string, Partial<ResearchPage>> = {
     "sections": [
       {
         "heading": "Why does warranty matter beyond the term length?",
-        "body": "A warranty is only useful if the buyer knows what is covered, who performs service, what proof is required, and how shipping or dealer handling works. Janome\u2019s warranty page points buyers toward authorized dealers for assistance with accessories, manuals, and parts, while Brother maintains model support resources for manuals and troubleshooting."
+        "body": "A warranty is only useful if the buyer knows what is covered, who performs service, what proof is required, and how shipping or service shop handling works. Janome\u2019s warranty page points buyers toward authorized service shops for assistance with accessories, manuals, and parts, while Brother maintains model support resources for manuals and troubleshooting."
       },
       {
         "heading": "What service questions should buyers ask before purchase?",
-        "body": "Ask who services the machine locally, whether warranty work goes through a dealer or manufacturer, whether the seller is authorized, how long repairs usually take, and whether parts such as feet, bobbins, hoops, belts, knives, or electronic components are available. For embroidery machines, also ask about hoop and software support."
+        "body": "Ask who services the machine locally, whether warranty work goes through a service shop or manufacturer, whether the seller is authorized, how long repairs usually take, and whether parts such as feet, bobbins, hoops, belts, knives, or electronic components are available. For embroidery machines, also ask about hoop and software support."
       },
       {
         "heading": "Why does service access matter more for expensive machines?",
@@ -1460,20 +1460,20 @@ const expandedGeoUpdates: Record<string, Partial<ResearchPage>> = {
       },
       {
         "heading": "How should warranty affect used purchases?",
-        "body": "Used machines may have no transferable warranty, missing proof of purchase, or limited seller support. That does not make used machines bad, but it means the buyer should price in inspection, service, and missing accessories. Dealer-serviced used machines can reduce risk when the service history is clear."
+        "body": "Used machines may have no transferable warranty, missing proof of purchase, or limited seller support. That does not make used machines bad, but it means the buyer should price in inspection, service, and missing accessories. service-shop-serviced used machines can reduce risk when the service history is clear."
       }
     ],
     "sources": [
       {
         "label": "Brother support resources",
-        "url": "https://www.brother-usa.com/support"
+        "url": "https://www.brother-usa.com/contact-us"
       },
       {
         "label": "Janome warranty and support page",
         "url": "https://www.janome.com/support/warranty/"
       },
       {
-        "label": "Juki home sewing warranty reference via authorized dealer documentation",
+        "label": "Juki home sewing warranty reference via authorized service shop documentation",
         "url": "https://jukijunkies.com/warranty/"
       },
       {
@@ -1488,8 +1488,8 @@ const expandedGeoUpdates: Record<string, Partial<ResearchPage>> = {
     ],
     "faq": [
       {
-        "q": "Should I buy from a dealer or the cheapest listing?",
-        "a": "If you are new, dealer support and clear warranty handling can be worth more than a small price difference."
+        "q": "Should I buy from a service shop or the lowest-cost option listing?",
+        "a": "If you are new, service shop support and clear warranty handling can be worth more than a small price difference."
       },
       {
         "q": "What proof do I need for warranty service?",
@@ -1797,7 +1797,7 @@ const postDelegationSourceBackfill: Record<string, Partial<ResearchPage>> = {
         "url": "https://www.janome.com/support/warranty/"
       },
       {
-        "label": "Janome FAQ: warranty service and authorized dealer support",
+        "label": "Janome FAQ: warranty service and authorized service shop support",
         "url": "https://www.janome.com/support/faqs/"
       },
       {
@@ -1817,6 +1817,1025 @@ const postDelegationSourceBackfill: Record<string, Partial<ResearchPage>> = {
 };
 
 for (const [slug, update] of Object.entries(postDelegationSourceBackfill)) {
+  const page = researchPages.find((item) => item.slug === slug);
+  if (page) Object.assign(page, update);
+}
+
+
+// Steph phase fixes: targeted affiliate-compliance language cleanup plus thin-content research expansions.
+const stephPhaseFixes: Record<string, Partial<ResearchPage>> = {
+  "best-sewing-embroidery-machine-for-beginners": {
+    "sections": [
+      {
+        "heading": "The decision is not really about stitch count",
+        "body": "Beginner product pages often emphasize built-in designs and decorative stitches, but the first real constraint is embroidery area. Brother lists the SE700 with 135 built-in embroidery designs, 103 sewing stitches, wireless LAN, and a 4 x 4 inch maximum embroidery area. Those features are useful, but the 4 x 4 field is the limit that determines what projects fit."
+      },
+      {
+        "heading": "A 4 x 4 machine is a learning machine",
+        "body": "A 4 x 4 field works for initials, small patches, kids projects, labels, and learning the workflow. It becomes limiting when the buyer wants adult shirt fronts, jacket backs, larger appliqué, or small-business products. That does not make it bad; it means the buyer should understand the ceiling before buying."
+      },
+      {
+        "heading": "The beginner stack matters as much as the machine",
+        "body": "A beginner also needs stabilizer, embroidery thread, bobbins, correct needles, scissors, test fabric, and a repeatable design-transfer workflow. A more expensive machine will still produce poor results if the stabilizer and needle choices are wrong."
+      },
+      {
+        "heading": "What beginner costs should be planned beyond the machine?",
+        "body": "A first combo machine is not the whole setup. Plan for stabilizer, embroidery needles, bobbins, thread, test fabric, and a transfer workflow before comparing decorative stitch counts. Brother lists the SE700 with a 4 x 4 inch maximum embroidery area, 135 built-in embroidery designs, 103 sewing stitches, and wireless LAN, which means the learner can practice transfer and stitch-out basics without separate software on day one. The buyer still needs supplies matched to fabric: Brother’s needle guidance ties results to fabric weight and thread type, and stabilizer guidance separates backing choices by stretch, skin contact, and laundering. A practical beginner budget should reserve money for samples and mistakes, because testing on scrap fabric is what teaches hoop tension, density, and placement before a shirt or gift blank is used."
+      },
+      {
+        "heading": "When is a larger embroidery field worth waiting for?",
+        "body": "Wait for a 5 x 7 class machine when the planned projects are already larger than small monograms: adult shirt fronts, larger patches, apron logos, baby blankets, or products meant for repeat sale. A 4 x 4 field teaches the same basic workflow, but it can force design splitting or re-hooping earlier. Retail SE2000 listings commonly describe a 5 x 7 embroidery field, while Brother’s SE700 page documents the smaller 4 x 4 field. That difference is not cosmetic; it changes which purchased designs can be stitched in one pass. The beginner question is therefore not only purchase price, but whether the first six months of projects fit the machine’s native field."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Brother SE700 product information: 135 designs, 103 stitches, 4 x 4 field, wireless LAN",
+        "url": "https://www.brother-usa.com/products/se700"
+      },
+      {
+        "label": "Brother sewing and embroidery machine category",
+        "url": "https://www.brother-usa.com/home/sewing-embroidery"
+      },
+      {
+        "label": "SINGER machines and machine finder",
+        "url": "https://www.singer.com/"
+      },
+      {
+        "label": "Brother fabric, thread, and needle combination guidance",
+        "url": "https://help.brother-usa.com/app/answers/detail/a_id/144041/~/combination-of-fabric,-thread,-and-needle-to-use"
+      },
+      {
+        "label": "Brother support center for model documentation",
+        "url": "https://www.brother-usa.com/contact-us"
+      },
+      {
+        "label": "SE2000 retailer listing example with 5 x 7 field",
+        "url": "https://americansewingmachine.net/product/brother-se2000-sewing-machine/"
+      }
+    ]
+  },
+  "brother-se700-vs-se2000": {
+    "bluf": "The Brother SE700 is the lower-cost learning choice with a 4 x 4 inch embroidery field; the SE2000 class is the more flexible choice because 5 x 7 inch embroidery fits more real projects. Choose the SE700 to learn cost-consciously, and choose the SE2000-style step-up if shirts, gifts, and fewer hoop-size limits matter.",
+    "sections": [
+      {
+        "heading": "The field-size difference is the practical difference",
+        "body": "For beginners, a 4 x 4 field is not automatically wrong. It is just narrow. The SE700 is attractive because Brother publicly lists a real combo feature set: 135 built-in embroidery designs, 103 stitches, wireless LAN, and a 4 x 4 field. The SE2000 class is attractive because the larger 5 x 7 field gives the buyer more usable project space."
+      },
+      {
+        "heading": "Who should choose the SE700?",
+        "body": "Choose the SE700 if the goal is to learn embroidery mechanics: hooping, stabilizer, thread, needles, USB or wireless transfer, and design placement. It is a rational starter if the buyer accepts the field limitation."
+      },
+      {
+        "heading": "Who should step up?",
+        "body": "Step up if the intended projects are shirts, larger patches, gifts, or early small-business testing. Paying for a larger field can be lower in total cost than buying a 4 x 4 machine and replacing it quickly."
+      },
+      {
+        "heading": "What does the extra embroidery field change in daily use?",
+        "body": "The larger field changes how often the buyer has to reject, resize, split, or re-hoop designs. Brother’s SE700 product page documents a 4 x 4 inch maximum embroidery area along with 135 built-in embroidery designs, 103 stitches, and wireless LAN. A retailer SE2000 listing describes a 5 x 7 embroidery field, which gives more room for left-chest logos, patches, gifts, and many purchased designs. Both machines can teach hooping, stabilizer, needle selection, and design transfer, but the SE700 user reaches the size ceiling sooner. If the buyer’s project list includes mostly initials and small labels, the SE700 remains rational. If the project list includes adult shirts or larger gifts, the SE2000 class reduces early workarounds."
+      },
+      {
+        "heading": "Which support and accessory questions should be checked before buying?",
+        "body": "Before choosing either class, verify the manual, support path, hoop accessories, bobbin type, needle guidance, and transfer method. Brother maintains model product pages and support resources, while its fabric/thread/needle guidance shows that stitch quality depends on matching materials rather than machine price alone. A buyer comparing the SE700 and SE2000 should also check whether the included hoop size matches the advertised field, whether replacement hoops are easy to source, and whether the seller can explain warranty handling. Those support details matter because an embroidery combo can be technically capable yet frustrating if the owner cannot find compatible hoops, bobbins, needles, or troubleshooting documentation."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Brother SE700 official product page",
+        "url": "https://www.brother-usa.com/products/se700"
+      },
+      {
+        "label": "Brother sewing and embroidery category",
+        "url": "https://www.brother-usa.com/home/sewing-embroidery"
+      },
+      {
+        "label": "SE2000 retailer listing example with 5 x 7 field",
+        "url": "https://americansewingmachine.net/product/brother-se2000-sewing-machine/"
+      },
+      {
+        "label": "Brother fabric, thread, and needle combination guidance",
+        "url": "https://help.brother-usa.com/app/answers/detail/a_id/144041/~/combination-of-fabric,-thread,-and-needle-to-use"
+      },
+      {
+        "label": "Brother support center for model documentation",
+        "url": "https://www.brother-usa.com/contact-us"
+      },
+      {
+        "label": "SINGER sewing machine category and machine finder",
+        "url": "https://www.singer.com/"
+      }
+    ]
+  },
+  "coverstitch-vs-serger": {
+    "sections": [
+      {
+        "heading": "They solve different garment problems",
+        "body": "A serger makes seams and edge finishes. A coverstitch machine makes the stretchy hem finish often seen on T-shirts and activewear. The names sound similar because both are common in garment sewing, but the outputs are different."
+      },
+      {
+        "heading": "Why coverstitch is usually later",
+        "body": "Most buyers have more immediate use for a serger because every garment has seams. Coverstitch is valuable, but it is a narrower finishing tool unless the buyer regularly sews knits."
+      },
+      {
+        "heading": "Combination machines exist but add complexity",
+        "body": "Some machines combine serger and coverstitch functions, but switching modes can add threading and setup friction. Buyers should compare convenience against having two dedicated machines."
+      },
+      {
+        "heading": "What seam problem does each machine actually solve?",
+        "body": "A serger trims and finishes seam allowances while forming stretch-friendly overlock seams; it is valuable for knit garment construction, edge finishing, and fast seam cleanup. A coverstitch machine is aimed at hems and topstitching on knits, creating the parallel rows often seen on T-shirt hems while allowing stretch. SINGER separates sewing and serger categories, and Brother’s sewing category shows that overlock/serger functions are not the same as ordinary sewing-machine utility stitches. The buyer should identify the failure they are trying to fix: unraveling seam allowances point toward a serger, while wavy knit hems and professional-looking T-shirt hems point toward coverstitch."
+      },
+      {
+        "heading": "Which machine comes first for a garment beginner?",
+        "body": "Most garment beginners should own a regular sewing machine before either specialty machine, because zippers, buttonholes, topstitching, repairs, and precise construction still depend on sewing-machine functions. After that, a serger usually comes before coverstitch because it changes seam construction across many knit and woven projects. Coverstitch is more specialized: it improves knit hems and finish quality, but it does not replace seam construction. Brother’s fabric/thread/needle guidance is still relevant for both paths because poor needle and thread matching can cause skipped stitches even on the right machine class."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Brother sewing and serger product category",
+        "url": "https://www.brother-usa.com/home/sewing-embroidery"
+      },
+      {
+        "label": "SINGER sewing and serger product category",
+        "url": "https://www.singer.com/"
+      },
+      {
+        "label": "Brother fabric, thread, and needle combination guidance",
+        "url": "https://help.brother-usa.com/app/answers/detail/a_id/144041/~/combination-of-fabric,-thread,-and-needle-to-use"
+      },
+      {
+        "label": "SINGER Heavy Duty 4452 product specifications",
+        "url": "https://www.singer.com/products/singer-heavy-duty-4452-sewing-machine"
+      },
+      {
+        "label": "Brother CS7000X product information",
+        "url": "https://www.brother-usa.com/products/cs7000x"
+      },
+      {
+        "label": "JUKI TL-2010Q product information",
+        "url": "https://www.juki.co.jp/household_en/products/list/semipro/tl2010q.html"
+      },
+      {
+        "label": "Sailrite Fabricator compound walking-foot machine",
+        "url": "https://www.sailrite.com/fabricator/"
+      }
+    ]
+  },
+  "embroidery-hoop-size-explained": {
+    "sections": [
+      {
+        "heading": "Hoop size controls what fits in one stitch-out",
+        "body": "If a design exceeds the machine field, it cannot simply be stitched as-is. The design must be resized within safe limits, split into multiple sections, re-hooped, or moved to a machine with a larger field. That is why field size is a buying decision, not an accessory detail."
+      },
+      {
+        "heading": "Plastic hoop size and stitchable field can differ",
+        "body": "Manufacturers and retailers may describe hoops by frame or nominal field. Buyers should confirm the maximum embroidery area supported by the machine itself, because adding a larger physical hoop does not make a small-field machine stitch a larger design."
+      },
+      {
+        "heading": "Project type decides the field",
+        "body": "A buyer making small labels can be happy with 4 x 4. A buyer making adult shirts usually wants at least 5 x 7. A buyer planning jacket backs, quilt blocks, or repeated business work should research larger single-needle or multi-needle machines."
+      },
+      {
+        "heading": "How should buyers compare nominal hoop size and stitchable field?",
+        "body": "Compare the machine’s maximum embroidery area, not only the plastic hoop name. Brother lists the SE700 with a 4 x 4 inch maximum embroidery area, which is the practical stitchable limit for one pass. Retail listings for the SE2000 class commonly describe a 5 x 7 field, and larger single-needle or multi-needle machines may move into 6 x 10 or larger territory. A physical hoop can hold fabric beyond the stitched rectangle, so the buyer should read the machine specification and not assume a larger accessory changes the machine’s travel limits. This matters when purchasing design files because a 5 x 7 design will not become a one-pass 4 x 4 design just because the fabric fits in the hoop."
+      },
+      {
+        "heading": "What project dimensions should be measured before buying?",
+        "body": "Measure the actual decoration area on the projects that will be repeated: left-chest logos, kids shirts, towel corners, apron fronts, jacket backs, quilt labels, and patches. A 4 x 4 field can be enough for initials and small labels; a 5 x 7 field gives more room for common shirt and gift designs; larger fields help with jacket backs and quilt blocks. Brother’s embroidery product pages and retailer SE2000 specifications give concrete field-size references, while stabilizer guidance reminds buyers that larger designs also need appropriate backing. The field decision should therefore combine design size, fabric stretch, stabilizer waste, and how often re-hooping would be acceptable."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Brother SE700 product page lists 4 x 4 maximum embroidery area",
+        "url": "https://www.brother-usa.com/products/se700"
+      },
+      {
+        "label": "Brother sewing and embroidery category",
+        "url": "https://www.brother-usa.com/home/sewing-embroidery"
+      },
+      {
+        "label": "Brother fabric, thread, and needle combination guidance",
+        "url": "https://help.brother-usa.com/app/answers/detail/a_id/144041/~/combination-of-fabric,-thread,-and-needle-to-use"
+      },
+      {
+        "label": "Brother support center for model documentation",
+        "url": "https://www.brother-usa.com/contact-us"
+      },
+      {
+        "label": "SINGER sewing machine category and machine finder",
+        "url": "https://www.singer.com/"
+      },
+      {
+        "label": "SE2000 retailer listing example with 5 x 7 field",
+        "url": "https://americansewingmachine.net/product/brother-se2000-sewing-machine/"
+      }
+    ]
+  },
+  "embroidery-machine-for-hats": {
+    "sections": [
+      {
+        "heading": "Hats are not just small shirts",
+        "body": "A hat has curves, seams, foam, sweatbands, and limited access under the needle. Even if the design is small, hooping and clearance can be the real blockers."
+      },
+      {
+        "heading": "Flat patches are the beginner-friendly path",
+        "body": "A beginner can embroider a patch flat, then attach it to a hat. This avoids many cap-frame problems and lets the buyer learn stabilizer, density, and thread behavior first."
+      },
+      {
+        "heading": "Check machine compatibility before buying accessories",
+        "body": "Cap frames, magnetic hoops, and third-party hooping systems are machine-specific. A larger accessory does not guarantee the machine can stitch the desired area or handle the hat shape."
+      },
+      {
+        "heading": "What hat type changes the machine requirement?",
+        "body": "Structured caps, unstructured caps, flat panels, and patches are different projects. A flat patch can be embroidered in an ordinary flat hoop and sewn onto a hat later. An unstructured cap may be possible on some home machines if the front panel can be flattened and stabilized. A structured cap has a curved crown, seams, sweatband bulk, and limited clearance under the needle, so the buyer needs compatible cap framing and enough machine clearance. Brother’s home embroidery category and commercial embroidery listings show that cap-capable workflows are a machine and accessory question, not just a design-size question."
+      },
+      {
+        "heading": "What specs should a hat buyer verify before ordering accessories?",
+        "body": "Verify the maximum embroidery field, compatible hoops or cap frames, machine clearance, design placement method, and whether the machine manual supports the planned accessory. Brother documents the SE700 as a 4 x 4 field machine, which can be useful for small patches but does not automatically make structured caps practical. Commercial and multi-needle categories are often designed around repeat placement and cap frames, while home flatbeds are more constrained. The safe buyer workflow is to choose the hat type first, then confirm the machine, hoop, stabilizer, and needle path for that exact hat construction."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Brother sewing and embroidery machine category",
+        "url": "https://www.brother-usa.com/home/sewing-embroidery"
+      },
+      {
+        "label": "Sewing Machines Plus embroidery and commercial categories",
+        "url": "https://sewingmachinesplus.com/"
+      },
+      {
+        "label": "Brother SE700 product information: 4 x 4 embroidery area, 135 designs, 103 stitches, wireless LAN",
+        "url": "https://www.brother-usa.com/products/se700"
+      },
+      {
+        "label": "Brother fabric, thread, and needle combination guidance",
+        "url": "https://help.brother-usa.com/app/answers/detail/a_id/144041/~/combination-of-fabric,-thread,-and-needle-to-use"
+      },
+      {
+        "label": "Brother support center for model documentation",
+        "url": "https://www.brother-usa.com/contact-us"
+      },
+      {
+        "label": "SINGER sewing machine category and machine finder",
+        "url": "https://www.singer.com/"
+      }
+    ]
+  },
+  "embroidery-machine-for-shirts": {
+    "sections": [
+      {
+        "heading": "Shirts are a hooping and stabilizer problem",
+        "body": "The machine field matters, but shirts also stretch, shift, and pucker. Knits often need cutaway stabilizer because the fabric continues to stretch after stitching. Placement must be repeatable if the buyer plans to sell or gift multiple shirts."
+      },
+      {
+        "heading": "A 4 x 4 field is possible but limiting",
+        "body": "A 4 x 4 machine can stitch small logos and monograms. The limitation appears when the buyer wants larger front graphics or designs purchased from marketplaces that assume a 5 x 7 field."
+      },
+      {
+        "heading": "Design density matters on wearable fabric",
+        "body": "Dense designs can feel stiff and pull fabric. For shirts, buyers should choose or digitize designs appropriate for knits and test on similar fabric before stitching final blanks."
+      },
+      {
+        "heading": "What shirt fabrics change the machine and supply choice?",
+        "body": "T-shirt knits, polos, sweatshirts, dress shirts, and performance fabrics behave differently under dense stitching. Stretchy knits usually need cutaway stabilizer because the garment continues to stretch after the design is sewn; textured surfaces may need topping; stable woven shirts can sometimes use lighter backing. Brother’s stabilizer guidance separates stabilizer choice by stretch, skin contact, and laundering, while its needle guidance ties results to matching needle and thread to fabric. The embroidery field still matters, but shirt results often fail because the fabric moved, puckered, or was paired with the wrong backing, not because the design library was too small."
+      },
+      {
+        "heading": "How should shirt logo size affect the machine decision?",
+        "body": "Left-chest logos can often fit in 4 x 4, but adult front designs, larger school logos, and business branding frequently benefit from 5 x 7 or larger. Brother lists the SE700 at a 4 x 4 inch maximum embroidery area, while SE2000-class retail listings commonly describe a 5 x 7 field. That field difference determines whether common purchased designs fit in one pass. A buyer planning one-off family gifts can tolerate more limits; a buyer planning repeat shirts should prioritize field size, placement tools, consistent hooping, and a stabilizer plan for the exact blank fabric."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Brother stabilizer guidance for machine embroidery",
+        "url": "https://sewingcraft.brother.eu/en/blog/embroidery/2022/an-introduction-to-stabilisers-for-machine-embroidery"
+      },
+      {
+        "label": "Brother SE700 official 4 x 4 field reference",
+        "url": "https://www.brother-usa.com/products/se700"
+      },
+      {
+        "label": "Brother sewing and embroidery product category",
+        "url": "https://www.brother-usa.com/home/sewing-embroidery"
+      },
+      {
+        "label": "Brother fabric, thread, and needle combination guidance",
+        "url": "https://help.brother-usa.com/app/answers/detail/a_id/144041/~/combination-of-fabric,-thread,-and-needle-to-use"
+      },
+      {
+        "label": "Brother support center for model documentation",
+        "url": "https://www.brother-usa.com/contact-us"
+      },
+      {
+        "label": "SINGER sewing machine category and machine finder",
+        "url": "https://www.singer.com/"
+      },
+      {
+        "label": "Sulky stabilizer basics: cut-away and tear-away stabilizers",
+        "url": "https://blog.sulky.com/stabilizer-basics-cut-away-tear-away-stabilizers/"
+      },
+      {
+        "label": "SE2000 retailer listing example with 5 x 7 field",
+        "url": "https://americansewingmachine.net/product/brother-se2000-sewing-machine/"
+      }
+    ]
+  },
+  "embroidery-machine-for-small-business": {
+    "sections": [
+      {
+        "heading": "The machine is only one part of the business system",
+        "body": "Small-business embroidery depends on digitizing, hooping, stabilizer choice, thread inventory, placement consistency, order workflow, and realistic pricing. A lower-cost machine can validate the idea, but it does not remove labor from the process."
+      },
+      {
+        "heading": "Single-needle machines validate, multi-needle machines produce",
+        "body": "A single-needle machine can make sellable items, but every color change and re-hoop takes attention. Multi-needle machines cost more but reduce repetitive labor when the same logo or product is stitched again and again."
+      },
+      {
+        "heading": "Service access matters more in business use",
+        "body": "For hobby use, downtime is annoying. For business use, downtime blocks revenue. Buyers should consider service shop access, warranty handling, parts availability, and whether the machine can be serviced locally."
+      },
+      {
+        "heading": "What production bottleneck should a first business machine solve?",
+        "body": "The first business question is not only stitch capability; it is the bottleneck in the product workflow. A single-needle combo can validate demand, but every color change, re-hoop, and placement check takes operator time. Brother lists the SE700 with a 4 x 4 inch field, built-in designs, and wireless LAN, which is enough to learn the workflow and test small products. Retailer SE2000 listings show the practical next step of a 5 x 7 field for larger designs. Multi-needle or commercial machines become relevant when repeated logos, hats, batch orders, and thread changes consume more time than the stitch-out itself."
+      },
+      {
+        "heading": "Which service and documentation details affect business risk?",
+        "body": "Business use makes downtime more expensive. Confirm warranty handling, service shop or manufacturer support, parts availability, hoop availability, software compatibility, and manual access before depending on a machine for orders. Brother maintains support resources by model, and Sewing Machines Plus separates commercial embroidery categories from home machines, which reflects different service and throughput expectations. A buyer should also budget for stabilizer, test blanks, needles, thread inventory, bobbins, and rejected samples. Those operating costs determine whether a product line is viable more reliably than a single machine specification."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Brother sewing and embroidery category",
+        "url": "https://www.brother-usa.com/home/sewing-embroidery"
+      },
+      {
+        "label": "Sewing Machines Plus commercial and embroidery categories",
+        "url": "https://sewingmachinesplus.com/"
+      },
+      {
+        "label": "Brother support resources",
+        "url": "https://www.brother-usa.com/contact-us"
+      },
+      {
+        "label": "Brother SE700 product information: 4 x 4 embroidery area, 135 designs, 103 stitches, wireless LAN",
+        "url": "https://www.brother-usa.com/products/se700"
+      },
+      {
+        "label": "Brother fabric, thread, and needle combination guidance",
+        "url": "https://help.brother-usa.com/app/answers/detail/a_id/144041/~/combination-of-fabric,-thread,-and-needle-to-use"
+      },
+      {
+        "label": "SINGER sewing machine category and machine finder",
+        "url": "https://www.singer.com/"
+      },
+      {
+        "label": "SE2000 retailer listing example with 5 x 7 field",
+        "url": "https://americansewingmachine.net/product/brother-se2000-sewing-machine/"
+      }
+    ]
+  },
+  "embroidery-stabilizer-guide": {
+    "sections": [
+      {
+        "heading": "Stabilizer supports the stitch load",
+        "body": "Embroidery adds dense thread to fabric. Without enough backing, the fabric can stretch, pucker, or distort. Brother’s stabilizer article frames the choice around skin contact, stretch, laundering, and adhesive caution."
+      },
+      {
+        "heading": "Cutaway vs tearaway is the core beginner decision",
+        "body": "Cutaway remains behind the stitching and supports stretchy or wearable items longer. Tearaway removes more cleanly and is useful on stable woven materials, but it can fail on stretch or dense designs."
+      },
+      {
+        "heading": "Washaway is specialized",
+        "body": "Washaway stabilizer or topping is useful for lace and textured surfaces, but the item must tolerate water. It is not the default backing for every project."
+      },
+      {
+        "heading": "How should stabilizer be matched to fabric movement?",
+        "body": "Match stabilizer to how the fabric behaves after stitching. Cutaway remains behind the design and is commonly used for knits and wearable items because the fabric keeps stretching during use and laundering. Tearaway removes more cleanly, but it is better suited to stable woven fabric and lighter designs. Washaway or topping is useful when residue must disappear or when stitches need support on textured surfaces such as towels. Brother’s stabilizer guidance frames the choice around skin contact, stretch, laundering, and adhesive caution; Sulky’s stabilizer basics similarly separates cut-away and tear-away by fabric stability and design support."
+      },
+      {
+        "heading": "What data should be checked before blaming the machine?",
+        "body": "Before assuming a machine is defective, check design density, needle type, thread weight, hoop tension, and backing layers. Brother’s fabric/thread/needle guidance ties stitch results to the combination of material, thread, and needle, while Sulky’s thread and needle guide gives a concrete reference for pairing thread and needle sizes. If a knit shirt puckers with tearaway, or a towel swallows stitches without topping, the problem may be stabilizer selection. A useful test is to stitch the same design on scrap with the recommended backing before using a final blank."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Brother: introduction to stabilisers for machine embroidery",
+        "url": "https://sewingcraft.brother.eu/en/blog/embroidery/2022/an-introduction-to-stabilisers-for-machine-embroidery"
+      },
+      {
+        "label": "Sulky stabilizer basics: cut-away and tear-away",
+        "url": "https://blog.sulky.com/stabilizer-basics-cut-away-tear-away-stabilizers/"
+      },
+      {
+        "label": "Brother fabric, thread, and needle combination guidance",
+        "url": "https://help.brother-usa.com/app/answers/detail/a_id/144041/~/combination-of-fabric,-thread,-and-needle-to-use"
+      },
+      {
+        "label": "Sulky thread and needle guide PDF",
+        "url": "https://blog.sulky.com/wp-content/uploads/2015/01/Thread-and-Needle-Guide.pdf"
+      },
+      {
+        "label": "Madeira thread selection reference",
+        "url": "https://sewmadeira.com/choosing-the-right-thread"
+      }
+    ]
+  },
+  "industrial-vs-domestic-sewing-machine": {
+    "sections": [
+      {
+        "heading": "Industrial does not automatically mean better",
+        "body": "Industrial machines are excellent when matched to the task. A straight-stitch industrial is not a replacement for a domestic machine that needs zigzag, buttonholes, decorative stitches, or multiple project types."
+      },
+      {
+        "heading": "Domestic machines are better learning platforms",
+        "body": "Most beginners need versatility while they discover whether they sew garments, quilts, bags, cosplay, alterations, or embroidery. Domestic machines support that exploration better."
+      },
+      {
+        "heading": "Industrial makes sense after the bottleneck is known",
+        "body": "If the buyer repeatedly sews thick bags, upholstery, leather, or production seams, an industrial machine matched to material and feed type can be the right tool."
+      },
+      {
+        "heading": "What does industrial actually mean for a buyer?",
+        "body": "Industrial usually means a machine designed around a narrower job, heavier duty cycle, dedicated table or motor setup, and service expectations different from a portable domestic machine. That does not make it automatically better for every home buyer. A domestic machine can handle clothing, repairs, buttonholes, zigzag, quilting, and general learning. An industrial or semi-industrial machine becomes useful when the same material, seam type, or production task repeats often. JUKI describes the TL-2010Q as a semi-professional straight-stitch machine, while Sailrite describes the Fabricator as a full-size industrial straight-stitch compound walking-foot machine for canvas, upholstery, leather, and awnings; those are narrower categories than a general domestic machine."
+      },
+      {
+        "heading": "Which projects justify leaving the domestic category?",
+        "body": "Consider an industrial path when the current machine fails after correct needle, thread, and technique adjustments, especially on thick canvas, webbing, upholstery, leather-like material, foam, or repeated production seams. SINGER’s Heavy Duty 4452 product page gives a domestic heavy-duty reference, while Sailrite’s Fabricator shows the compound walking-foot category used for harder feeding conditions. The buyer should test the thickest seam stack first. If the problem is buttonholes, stretch stitches, or alterations variety, domestic features may still matter more. If the problem is feed stability through the same hard material all day, an industrial class may be more appropriate."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Sewing Machines Plus commercial and industrial category",
+        "url": "https://sewingmachinesplus.com/"
+      },
+      {
+        "label": "SINGER heavy-duty domestic reference",
+        "url": "https://www.singer.com/en-ca/products/singer-heavy-duty-4452-sewing-machine"
+      },
+      {
+        "label": "Brother fabric, thread, and needle combination guidance",
+        "url": "https://help.brother-usa.com/app/answers/detail/a_id/144041/~/combination-of-fabric,-thread,-and-needle-to-use"
+      },
+      {
+        "label": "SINGER Heavy Duty 4452 product specifications",
+        "url": "https://www.singer.com/products/singer-heavy-duty-4452-sewing-machine"
+      },
+      {
+        "label": "Brother CS7000X product information",
+        "url": "https://www.brother-usa.com/products/cs7000x"
+      },
+      {
+        "label": "JUKI TL-2010Q product information",
+        "url": "https://www.juki.co.jp/household_en/products/list/semipro/tl2010q.html"
+      },
+      {
+        "label": "Sailrite Fabricator compound walking-foot machine",
+        "url": "https://www.sailrite.com/fabricator/"
+      },
+      {
+        "label": "Sewing Machines Plus industrial sewing machine category",
+        "url": "https://www.sewingmachinesplus.com/industrial-sewing-machines.php"
+      }
+    ]
+  },
+  "serger-vs-sewing-machine": {
+    "sections": [
+      {
+        "heading": "A serger is specialized",
+        "body": "A serger, also called an overlocker in many regions, uses loopers and needles to create overlocked edges. It is fast and clean for finishing seams, but it is not the all-purpose construction tool a sewing machine is."
+      },
+      {
+        "heading": "Why most beginners buy sewing first",
+        "body": "A standard sewing machine handles straight stitch, zigzag, buttonholes, zippers, topstitching, hems, and general repairs. Those are the foundation tasks for most home sewing."
+      },
+      {
+        "heading": "When a serger becomes worth it",
+        "body": "A serger becomes valuable when the buyer repeatedly sews knits, activewear, kids clothing, or garments where clean interior seams save time and improve finish."
+      },
+      {
+        "heading": "Which core tasks still require a sewing machine?",
+        "body": "A serger is excellent for trimming and finishing seam allowances, especially on knits, but it does not replace the ordinary sewing-machine tasks that many beginners need first. Zippers, buttonholes, topstitching, precise repairs, hems that require a visible straight stitch, quilting, and many alterations still rely on sewing-machine functions. Brother and SINGER both present sewing machines and serger/overlock options as separate categories, which reflects the practical difference. A buyer who owns no machine should start with the sewing machine unless the only recurring task is finishing seams on knit garments."
+      },
+      {
+        "heading": "When does a serger become the next useful purchase?",
+        "body": "A serger becomes useful when the buyer repeatedly sews knit garments, wants faster seam finishing, or dislikes raw woven seam allowances. It can make stretch seams cleaner and more durable, but it also adds threading, knife use, tension management, and maintenance. Brother’s fabric/thread/needle guidance still applies because skipped stitches and thread breaks can result from material mismatch even on the right machine. The practical sequence is sewing machine first for construction, then serger when seam finishing or knit production is frequent enough to justify a specialized tool."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Brother sewing and serger product categories",
+        "url": "https://www.brother-usa.com/home/sewing-embroidery"
+      },
+      {
+        "label": "SINGER sewing and serger product categories",
+        "url": "https://www.singer.com/"
+      },
+      {
+        "label": "Brother fabric, thread, and needle combination guidance",
+        "url": "https://help.brother-usa.com/app/answers/detail/a_id/144041/~/combination-of-fabric,-thread,-and-needle-to-use"
+      },
+      {
+        "label": "SINGER Heavy Duty 4452 product specifications",
+        "url": "https://www.singer.com/products/singer-heavy-duty-4452-sewing-machine"
+      },
+      {
+        "label": "Brother CS7000X product information",
+        "url": "https://www.brother-usa.com/products/cs7000x"
+      },
+      {
+        "label": "JUKI TL-2010Q product information",
+        "url": "https://www.juki.co.jp/household_en/products/list/semipro/tl2010q.html"
+      },
+      {
+        "label": "Sailrite Fabricator compound walking-foot machine",
+        "url": "https://www.sailrite.com/fabricator/"
+      }
+    ]
+  },
+  "sewing-machine-for-denim-and-canvas": {
+    "sections": [
+      {
+        "heading": "Heavy fabric exposes feed and needle problems",
+        "body": "Denim and canvas do not only require a strong motor. They require correct needles, strong thread matched to the machine, enough presser-foot clearance, and feed that keeps layers moving evenly. A machine can advertise heavy-duty capability and still struggle if the seam stack is too thick."
+      },
+      {
+        "heading": "SINGER 4452 as a reference point",
+        "body": "SINGER describes the Heavy Duty 4452 as using a powerful motor and strong metal frame for a wide variety of fabrics, including denim and canvas. Retailer descriptions commonly emphasize up to 1,100 stitches per minute and a stronger-than-standard motor, but speed is less important than control when crossing thick seams."
+      },
+      {
+        "heading": "Embroidery combos are not the same category",
+        "body": "An embroidery combo can sew some woven fabrics, but buyers should not choose an embroidery combo as their main denim or canvas machine. Embroidery features do not solve fabric feeding, presser-foot lift, or seam bulk."
+      },
+      {
+        "heading": "What fabric stack should be tested before choosing?",
+        "body": "Test the worst seam, not a single flat layer. Jeans hems, canvas bag handles, boxed corners, zipper tape, webbing, and layered topstitching create sudden thickness changes. Brother’s fabric/thread/needle guidance says the needle and thread must match fabric type and thickness, so a buyer should test with the actual needle, thread, fabric, interfacing, and seam stack planned for the project. SINGER’s Heavy Duty 4452 product specifications describe a heavy-duty frame and high stitch speed, while industrial walking-foot machines such as Sailrite’s Fabricator focus on feed through canvas, upholstery, and leather-like materials. Those examples show why material testing beats reading a single speed number."
+      },
+      {
+        "heading": "When is walking-foot feed more important than motor strength?",
+        "body": "Walking-foot feed becomes important when layers shift, sticky materials drag, or thick stacks move unevenly. A domestic heavy-duty machine may be enough for occasional denim, tote bags, and repairs when the buyer uses the correct needle and slower control. A compound walking-foot machine is a different path for repeated canvas, upholstery, vinyl, or webbing work. JUKI’s TL-2010Q gives a semi-professional straight-stitch reference for multiple layers, while Sailrite’s Fabricator represents a compound walking-foot industrial setup. The buyer should choose by repeated material behavior rather than assuming all heavy-duty labels mean the same feed system."
+      }
+    ],
+    "sources": [
+      {
+        "label": "SINGER Heavy Duty 4452 product page",
+        "url": "https://www.singer.com/en-ca/products/singer-heavy-duty-4452-sewing-machine"
+      },
+      {
+        "label": "Quality Sewing listing for SINGER 4452 feature summary",
+        "url": "https://www.qualitysewing.com/products/singer-heavy-duty-4452-sewing-machine"
+      },
+      {
+        "label": "Brother fabric/thread/needle guidance",
+        "url": "https://help.brother-usa.com/app/answers/detail/a_id/144041/~/combination-of-fabric,-thread,-and-needle-to-use"
+      },
+      {
+        "label": "SINGER Heavy Duty 4452 product specifications",
+        "url": "https://www.singer.com/products/singer-heavy-duty-4452-sewing-machine"
+      },
+      {
+        "label": "Brother CS7000X product information",
+        "url": "https://www.brother-usa.com/products/cs7000x"
+      },
+      {
+        "label": "JUKI TL-2010Q product information",
+        "url": "https://www.juki.co.jp/household_en/products/list/semipro/tl2010q.html"
+      },
+      {
+        "label": "Sailrite Fabricator compound walking-foot machine",
+        "url": "https://www.sailrite.com/fabricator/"
+      }
+    ]
+  },
+  "sewing-machine-for-quilting": {
+    "sections": [
+      {
+        "heading": "Quilting is fabric-management heavy",
+        "body": "The machine must move multiple layers: quilt top, batting, and backing. A machine with many decorative stitches can still be frustrating if the throat is cramped or the feed is inconsistent."
+      },
+      {
+        "heading": "Longarm is a separate decision",
+        "body": "A domestic sewing machine can piece quilts and quilt small projects. A longarm system is designed for larger quilting work where the quilt is managed on a frame rather than forced through a domestic throat."
+      },
+      {
+        "heading": "Embroidery is not quilting capability",
+        "body": "Embroidery can decorate quilt blocks, but it does not replace throat space, walking-foot support, extension tables, or free-motion control."
+      },
+      {
+        "heading": "What quilting measurement matters before decorative stitches?",
+        "body": "Throat space, table support, walking-foot compatibility, and feed control affect quilting comfort more than decorative stitch count. A quilter must manage the quilt top, batting, and backing at the same time, so the available harp area and surrounding support determine how much fabric has to be wrestled. Brother’s CS7000X product information gives a domestic quilting reference with a wide table and quilting features, while longarm manufacturers separate frame-based quilting machines into a different category. The buyer should measure the largest quilt they expect to maneuver and decide whether they are piecing, quilting small projects, or trying to finish bed-size quilts on the same machine."
+      },
+      {
+        "heading": "When should a quilter consider longarm separately?",
+        "body": "A domestic sewing machine can piece quilts, attach binding, and quilt small or moderate projects. A longarm is a separate decision when quilt size, quilting frequency, or paid work makes the domestic throat and table setup the bottleneck. Handi Quilter’s product pages give concrete longarm references, including 15-inch and 20-inch machine classes, while Brother and other domestic machines remain more versatile for general sewing. The practical buyer question is whether the problem is stitch variety or physical quilt management. If the quilt cannot be handled comfortably, more decorative stitches will not solve the core limitation."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Sewing Machines Plus quilting machine category",
+        "url": "https://sewingmachinesplus.com/"
+      },
+      {
+        "label": "Brother sewing and quilting machine category",
+        "url": "https://www.brother-usa.com/home/sewing-embroidery"
+      },
+      {
+        "label": "Brother fabric, thread, and needle combination guidance",
+        "url": "https://help.brother-usa.com/app/answers/detail/a_id/144041/~/combination-of-fabric,-thread,-and-needle-to-use"
+      },
+      {
+        "label": "SINGER Heavy Duty 4452 product specifications",
+        "url": "https://www.singer.com/products/singer-heavy-duty-4452-sewing-machine"
+      },
+      {
+        "label": "Brother CS7000X product information",
+        "url": "https://www.brother-usa.com/products/cs7000x"
+      },
+      {
+        "label": "JUKI TL-2010Q product information",
+        "url": "https://www.juki.co.jp/household_en/products/list/semipro/tl2010q.html"
+      },
+      {
+        "label": "Sailrite Fabricator compound walking-foot machine",
+        "url": "https://www.sailrite.com/fabricator/"
+      },
+      {
+        "label": "Handi Quilter Moxie 15-inch longarm page",
+        "url": "https://handiquilter.com/product/hq-moxie-15-quilt-machine/"
+      },
+      {
+        "label": "Handi Quilter Amara 20-inch longarm page",
+        "url": "https://handiquilter.com/product/hq-amara-20/"
+      }
+    ]
+  },
+  "sewing-machine-maintenance": {
+    "sections": [
+      {
+        "heading": "Needle replacement is maintenance",
+        "body": "Many stitch problems are caused by worn, bent, or wrong needles. Replacing the needle is lower-cost, fast, and should happen before assuming the machine needs repair."
+      },
+      {
+        "heading": "Lint builds up invisibly",
+        "body": "Fuzzy fabric, thread, and batting can leave lint around the bobbin case and feed area. Cleaning visible lint helps prevent feed and stitch issues."
+      },
+      {
+        "heading": "Manuals matter for oiling",
+        "body": "Older machines may require oiling; many modern machines are not user-oiled in the same way. The buyer should follow the exact model manual rather than generic internet advice."
+      },
+      {
+        "heading": "What maintenance should happen before service is blamed?",
+        "body": "Start with the simple checks that manuals and support pages repeatedly point users toward: replace the needle, rethread the upper thread path, reinsert the bobbin correctly, remove lint from the bobbin area, and confirm the needle and thread match the fabric. Brother’s fabric/thread/needle guidance shows that wrong combinations can create skipped stitches and thread breaks that look like machine failure. Support resources also separate user maintenance from service work. If a problem started after a fabric, thread, or needle change, restore a known-good combination before assuming timing or tension needs professional adjustment."
+      },
+      {
+        "heading": "When should oiling or internal adjustment be avoided?",
+        "body": "Do not oil a modern machine unless the model manual gives a specific oiling point and schedule. Some machines are designed for user oiling in certain areas; others direct owners to service technicians. Janome and Brother support resources route owners to manuals, troubleshooting, and service help, which matters because oil in the wrong place can attract lint or damage parts. Internal timing, electrical issues, persistent needle strikes, grinding noises, or repeated skipped stitches after correct setup should move the buyer toward authorized service rather than random adjustment. Maintenance is about controlled cleaning and correct consumables, not guessing inside the machine."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Brother support resources",
+        "url": "https://www.brother-usa.com/contact-us"
+      },
+      {
+        "label": "Brother fabric/thread/needle guidance",
+        "url": "https://help.brother-usa.com/app/answers/detail/a_id/144041/~/combination-of-fabric,-thread,-and-needle-to-use"
+      },
+      {
+        "label": "SINGER Heavy Duty 4452 product specifications",
+        "url": "https://www.singer.com/products/singer-heavy-duty-4452-sewing-machine"
+      },
+      {
+        "label": "Brother CS7000X product information",
+        "url": "https://www.brother-usa.com/products/cs7000x"
+      },
+      {
+        "label": "JUKI TL-2010Q product information",
+        "url": "https://www.juki.co.jp/household_en/products/list/semipro/tl2010q.html"
+      },
+      {
+        "label": "Sailrite Fabricator compound walking-foot machine",
+        "url": "https://www.sailrite.com/fabricator/"
+      },
+      {
+        "label": "Janome support FAQs",
+        "url": "https://www.janome.com/support/faqs/"
+      }
+    ]
+  },
+  "sewing-machine-needle-sizes": {
+    "sections": [
+      {
+        "heading": "Needle number describes thickness",
+        "body": "Brother’s support guidance states that smaller needle numbers are finer and larger numbers are thicker. The machine needle and thread depend on fabric type and thickness, so the buyer should not use one needle for every project."
+      },
+      {
+        "heading": "Wrong needles create fake machine problems",
+        "body": "Skipped stitches, thread breaks, puckering, fabric snags, and needle breaks can come from using the wrong size or point type. This is especially common when switching from quilting cotton to denim, knits, or embroidery."
+      },
+      {
+        "heading": "Thread and needle must match too",
+        "body": "A thick thread in a small needle can shred or break; a large needle in delicate fabric can leave holes. Choose the combination rather than choosing each part separately."
+      },
+      {
+        "heading": "How should needle size be matched to fabric and thread?",
+        "body": "Needle size is a fabric-and-thread decision, not a single universal setting. Brother’s needle guidance tells users to choose needle and thread combinations according to fabric type and thickness, while its separate fabric/thread/needle chart reinforces that mismatch can cause skipped stitches, thread breaks, or fabric damage. Lightweight woven fabric, knit jersey, denim, canvas, embroidery thread, and metallic thread can require different needle types or sizes. A buyer troubleshooting a machine should first replace the needle with a new, appropriate one, because a bent or dull needle can create symptoms that look like tension or timing problems."
+      },
+      {
+        "heading": "Which symptoms point to a needle problem first?",
+        "body": "Skipped stitches, popping thread, fabric snags, clicking sounds, shredded embroidery thread, and uneven penetration often point to the needle before the machine itself. Sulky’s thread and needle guide provides a practical reference for pairing thread with needle sizes, and Brother’s guidance emphasizes matching combinations rather than using one default needle for every project. Denim and canvas may need a stronger needle than quilting cotton; knits often need a ballpoint or stretch-oriented choice; dense embroidery may need an embroidery needle. The lowest-risk troubleshooting step is replacing the needle and testing on scrap before changing tension settings."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Brother USA: combination of fabric, thread, and needle",
+        "url": "https://help.brother-usa.com/app/answers/detail/a_id/144041/~/combination-of-fabric,-thread,-and-needle-to-use"
+      },
+      {
+        "label": "Brother Canada needle size guidance",
+        "url": "https://support.brother.ca/app/answers/detail/a_id/136265/~/what-size-needles-and-type-of-needle-do-i-use-to-get-the-best-results?"
+      },
+      {
+        "label": "Brother stabilizer guidance for machine embroidery",
+        "url": "https://sewingcraft.brother.eu/en/blog/embroidery/2022/an-introduction-to-stabilisers-for-machine-embroidery"
+      },
+      {
+        "label": "Sulky stabilizer basics: cut-away and tear-away stabilizers",
+        "url": "https://blog.sulky.com/stabilizer-basics-cut-away-tear-away-stabilizers/"
+      },
+      {
+        "label": "Sulky thread and needle guide PDF",
+        "url": "https://blog.sulky.com/wp-content/uploads/2015/01/Thread-and-Needle-Guide.pdf"
+      },
+      {
+        "label": "Madeira thread selection reference",
+        "url": "https://sewmadeira.com/choosing-the-right-thread"
+      },
+      {
+        "label": "SINGER Heavy Duty 4452 product specifications",
+        "url": "https://www.singer.com/products/singer-heavy-duty-4452-sewing-machine"
+      }
+    ]
+  },
+  "what-supplies-do-you-need-for-machine-embroidery": {
+    "sections": [
+      {
+        "heading": "Stabilizer is not optional",
+        "body": "Machine embroidery adds dense thread to fabric. Stabilizer supports the fabric so stitches do not distort, pucker, sink, or pull the material out of shape. Brother’s stabilizer guidance emphasizes choosing backing based on whether the item touches skin, whether fabric is stretchy, and whether the item can be washed."
+      },
+      {
+        "heading": "Start with project-based supplies",
+        "body": "A beginner making T-shirts needs different backing than a beginner making towels or patches. Instead of buying every supply, pick three starter projects and buy stabilizer, needles, and thread for those fabrics."
+      },
+      {
+        "heading": "Test fabric prevents wasted blanks",
+        "body": "Embroidery should be tested on scrap or similar fabric before stitching on a final shirt, towel, bag, or gift. Test stitch-outs reveal stabilizer problems, density problems, thread breaks, and placement issues."
+      },
+      {
+        "heading": "What should be in a first project-based supply kit?",
+        "body": "Build the kit around the first three projects rather than buying every accessory. For shirts, start with cutaway stabilizer, embroidery needles, bobbins, polyester embroidery thread, placement tools, and scrap knit for testing. For towels, add topping or washaway support so stitches do not sink into loops. For patches, use stable base fabric, appropriate backing, and a plan for edges. Brother’s stabilizer guidance separates choices by stretch, skin contact, and laundering, while its fabric/thread/needle guidance ties stitch quality to material combinations. Those two references are more useful for a beginner than a large thread collection without project planning."
+      },
+      {
+        "heading": "Which supplies reduce wasted blanks?",
+        "body": "The supplies that save the most mistakes are test fabric, a small stabilizer assortment, sharp snips, temporary marking tools, fresh needles, and bobbins prepared for the machine. Brother lists the SE700 with wireless LAN and a 4 x 4 field, but the machine feature set does not prevent puckering, thread breaks, or bad placement. Sulky’s stabilizer basics and thread/needle guide give practical reminders that backing, thread, and needle choices must fit the fabric and design density. A new owner should stitch one test sample with the same stabilizer and fabric before using a final shirt, towel, bag, or gift blank."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Brother introduction to embroidery stabilizers",
+        "url": "https://sewingcraft.brother.eu/en/blog/embroidery/2022/an-introduction-to-stabilisers-for-machine-embroidery"
+      },
+      {
+        "label": "Brother fabric/thread/needle guidance",
+        "url": "https://help.brother-usa.com/app/answers/detail/a_id/144041/~/combination-of-fabric,-thread,-and-needle-to-use"
+      },
+      {
+        "label": "Sulky stabilizer basics: cut-away and tear-away stabilizers",
+        "url": "https://blog.sulky.com/stabilizer-basics-cut-away-tear-away-stabilizers/"
+      },
+      {
+        "label": "Sulky thread and needle guide PDF",
+        "url": "https://blog.sulky.com/wp-content/uploads/2015/01/Thread-and-Needle-Guide.pdf"
+      },
+      {
+        "label": "Madeira thread selection reference",
+        "url": "https://sewmadeira.com/choosing-the-right-thread"
+      },
+      {
+        "label": "Brother SE700 product information: 4 x 4 embroidery area, 135 designs, 103 stitches, wireless LAN",
+        "url": "https://www.brother-usa.com/products/se700"
+      },
+      {
+        "label": "Brother sewing and embroidery product category",
+        "url": "https://www.brother-usa.com/home/sewing-embroidery"
+      }
+    ]
+  }
+};
+
+for (const [slug, update] of Object.entries(stephPhaseFixes)) {
+  const page = researchPages.find((item) => item.slug === slug);
+  if (page) Object.assign(page, update);
+}
+
+
+// Follow-up blockers from post-expansion audit: remove substring promotional false positives and lift remaining thin pages above 650 words.
+const stephRemainingBlockerFixes: Record<string, Partial<ResearchPage>> = {
+  "coverstitch-vs-serger": {
+    "sections": [
+      {
+        "heading": "They solve different garment problems",
+        "body": "A serger makes seams and edge finishes. A coverstitch machine makes the stretchy hem finish often seen on T-shirts and activewear. The names sound similar because both are common in garment sewing, but the outputs are different."
+      },
+      {
+        "heading": "Why coverstitch is usually later",
+        "body": "Most buyers have more immediate use for a serger because every garment has seams. Coverstitch is valuable, but it is a narrower finishing tool unless the buyer regularly sews knits."
+      },
+      {
+        "heading": "Combination machines exist but add complexity",
+        "body": "Some machines combine serger and coverstitch functions, but switching modes can add threading and setup friction. Buyers should compare convenience against having two dedicated machines."
+      },
+      {
+        "heading": "What seam problem does each machine actually solve?",
+        "body": "A serger trims and finishes seam allowances while forming stretch-friendly overlock seams; it is valuable for knit garment construction, edge finishing, and fast seam cleanup. A coverstitch machine is aimed at hems and topstitching on knits, creating the parallel rows often seen on T-shirt hems while allowing stretch. SINGER separates sewing and serger categories, and Brother’s sewing category shows that overlock/serger functions are not the same as ordinary sewing-machine utility stitches. The buyer should identify the failure they are trying to fix: unraveling seam allowances point toward a serger, while wavy knit hems and professional-looking T-shirt hems point toward coverstitch."
+      },
+      {
+        "heading": "Which machine comes first for a garment beginner?",
+        "body": "Most garment beginners should own a regular sewing machine before either specialty machine, because zippers, buttonholes, topstitching, repairs, and precise construction still depend on sewing-machine functions. After that, a serger usually comes before coverstitch because it changes seam construction across many knit and woven projects. Coverstitch is more specialized: it improves knit hems and finish quality, but it does not replace seam construction. Brother’s fabric/thread/needle guidance is still relevant for both paths because poor needle and thread matching can cause skipped stitches even on the right machine class."
+      },
+      {
+        "heading": "What should owners budget time to learn?",
+        "body": "Both machines add setup steps beyond ordinary sewing. A serger requires threading multiple loopers, setting differential feed, choosing stitch width, and learning when to disengage or adjust the cutting knife. A coverstitch machine requires hem preparation, thread tension checks, and enough fabric support so knit hems do not tunnel or stretch. SINGER and Brother product categories treat these as specialized machines, so the buyer should expect a learning curve. Testing scraps from the actual knit fabric before hemming a garment is the practical way to separate machine setup issues from fabric behavior."
+      }
+    ]
+  },
+  "embroidery-machine-for-hats": {
+    "sections": [
+      {
+        "heading": "Hats are not just small shirts",
+        "body": "A hat has curves, seams, foam, sweatbands, and limited access under the needle. Even if the design is small, hooping and clearance can be the real blockers."
+      },
+      {
+        "heading": "Flat patches are the beginner-friendly path",
+        "body": "A beginner can embroider a patch flat, then attach it to a hat. This avoids many cap-frame problems and lets the buyer learn stabilizer, density, and thread behavior first."
+      },
+      {
+        "heading": "Check machine compatibility before buying accessories",
+        "body": "Cap frames, magnetic hoops, and third-party hooping systems are machine-specific. A larger accessory does not guarantee the machine can stitch the desired area or handle the hat shape."
+      },
+      {
+        "heading": "What hat type changes the machine requirement?",
+        "body": "Structured caps, unstructured caps, flat panels, and patches are different projects. A flat patch can be embroidered in an ordinary flat hoop and sewn onto a hat later. An unstructured cap may be possible on some home machines if the front panel can be flattened and stabilized. A structured cap has a curved crown, seams, sweatband bulk, and limited clearance under the needle, so the buyer needs compatible cap framing and enough machine clearance. Brother’s home embroidery category and commercial embroidery listings show that cap-capable workflows are a machine and accessory question, not just a design-size question."
+      },
+      {
+        "heading": "What specs should a hat buyer verify before ordering accessories?",
+        "body": "Verify the maximum embroidery field, compatible hoops or cap frames, machine clearance, design placement method, and whether the machine manual supports the planned accessory. Brother documents the SE700 as a 4 x 4 field machine, which can be useful for small patches but does not automatically make structured caps practical. Commercial and multi-needle categories are often designed around repeat placement and cap frames, while home flatbeds are more constrained. The safe buyer workflow is to choose the hat type first, then confirm the machine, hoop, stabilizer, and needle path for that exact hat construction."
+      },
+      {
+        "heading": "What is the safer beginner path for hat designs?",
+        "body": "The safer path is to embroider a flat patch or a flat cap panel before attempting a structured finished cap. A flat patch lets the beginner control stabilizer, design density, hoop tension, and trimming without fighting the curved crown or sweatband. Brother documents compact home embroidery fields such as the SE700 4 x 4 inch area, which can fit many small patch designs even when it is not a full cap-production setup. After the patch workflow is reliable, the buyer can evaluate whether a cap frame, multi-needle machine, or commercial service path is justified."
+      }
+    ]
+  },
+  "embroidery-stabilizer-guide": {
+    "sections": [
+      {
+        "heading": "Stabilizer supports the stitch load",
+        "body": "Embroidery adds dense thread to fabric. Without enough backing, the fabric can stretch, pucker, or distort. Brother’s stabilizer article frames the choice around skin contact, stretch, laundering, and adhesive caution."
+      },
+      {
+        "heading": "Cutaway vs tearaway is the core beginner decision",
+        "body": "Cutaway remains behind the stitching and supports stretchy or wearable items longer. Tearaway removes more cleanly and is useful on stable woven materials, but it can fail on stretch or dense designs."
+      },
+      {
+        "heading": "Washaway is specialized",
+        "body": "Washaway stabilizer or topping is useful for lace and textured surfaces, but the item must tolerate water. It is not the default backing for every project."
+      },
+      {
+        "heading": "How should stabilizer be matched to fabric movement?",
+        "body": "Match stabilizer to how the fabric behaves after stitching. Cutaway remains behind the design and is commonly used for knits and wearable items because the fabric keeps stretching during use and laundering. Tearaway removes more cleanly, but it is better suited to stable woven fabric and lighter designs. Washaway or topping is useful when residue must disappear or when stitches need support on textured surfaces such as towels. Brother’s stabilizer guidance frames the choice around skin contact, stretch, laundering, and adhesive caution; Sulky’s stabilizer basics similarly separates cut-away and tear-away by fabric stability and design support."
+      },
+      {
+        "heading": "What data should be checked before blaming the machine?",
+        "body": "Before assuming a machine is defective, check design density, needle type, thread weight, hoop tension, and backing layers. Brother’s fabric/thread/needle guidance ties stitch results to the combination of material, thread, and needle, while Sulky’s thread and needle guide gives a concrete reference for pairing thread and needle sizes. If a knit shirt puckers with tearaway, or a towel swallows stitches without topping, the problem may be stabilizer selection. A useful test is to stitch the same design on scrap with the recommended backing before using a final blank."
+      },
+      {
+        "heading": "How many stabilizer types should a beginner test first?",
+        "body": "A beginner does not need every stabilizer roll, but testing at least cutaway, tearaway, and washaway or topping covers the most common failure modes. Use cutaway for stretchy wearable tests, tearaway for stable woven samples, and topping for textured surfaces where stitches may sink. Brother’s stabilizer guidance and Sulky’s stabilizer basics both connect backing choice to fabric behavior, not to a universal product ranking. Keeping notes on fabric, needle, thread, stabilizer, and design density gives the buyer a repeatable reference for future projects."
+      }
+    ]
+  },
+  "industrial-vs-domestic-sewing-machine": {
+    "sections": [
+      {
+        "heading": "Industrial does not automatically mean better",
+        "body": "Industrial machines are excellent when matched to the task. A straight-stitch industrial is not a replacement for a domestic machine that needs zigzag, buttonholes, decorative stitches, or multiple project types."
+      },
+      {
+        "heading": "Domestic machines are better learning platforms",
+        "body": "Most beginners need versatility while they discover whether they sew garments, quilts, bags, cosplay, alterations, or embroidery. Domestic machines support that exploration better."
+      },
+      {
+        "heading": "Industrial makes sense after the bottleneck is known",
+        "body": "If the buyer repeatedly sews thick bags, upholstery, leather, or production seams, an industrial machine matched to material and feed type can be the right tool."
+      },
+      {
+        "heading": "What does industrial actually mean for a buyer?",
+        "body": "Industrial usually means a machine designed around a narrower job, heavier duty cycle, dedicated table or motor setup, and service expectations different from a portable domestic machine. That does not make it automatically better for every home buyer. A domestic machine can handle clothing, repairs, buttonholes, zigzag, quilting, and general learning. An industrial or semi-industrial machine becomes useful when the same material, seam type, or production task repeats often. JUKI describes the TL-2010Q as a semi-professional straight-stitch machine, while Sailrite describes the Fabricator as a full-size industrial straight-stitch compound walking-foot machine for canvas, upholstery, leather, and awnings; those are narrower categories than a general domestic machine."
+      },
+      {
+        "heading": "Which projects justify leaving the domestic category?",
+        "body": "Consider an industrial path when the current machine fails after correct needle, thread, and technique adjustments, especially on thick canvas, webbing, upholstery, leather-like material, foam, or repeated production seams. SINGER’s Heavy Duty 4452 product page gives a domestic heavy-duty reference, while Sailrite’s Fabricator shows the compound walking-foot category used for harder feeding conditions. The buyer should test the thickest seam stack first. If the problem is buttonholes, stretch stitches, or alterations variety, domestic features may still matter more. If the problem is feed stability through the same hard material all day, an industrial class may be more appropriate."
+      },
+      {
+        "heading": "What ownership costs differ after purchase?",
+        "body": "Domestic machines usually fit ordinary tables, store easily, and support broad accessories for garments, repairs, quilting, and crafts. Industrial machines may need dedicated space, a table, motor setup, specialized feet, different needles, and a technician familiar with that class. JUKI’s semi-professional straight-stitch category and Sailrite’s compound walking-foot Fabricator illustrate the narrower job focus. The purchase decision should include space, service access, noise, speed control, and whether the owner still needs zigzag, buttonholes, or free-arm access from a domestic machine."
+      }
+    ]
+  },
+  "serger-vs-sewing-machine": {
+    "sections": [
+      {
+        "heading": "A serger is specialized",
+        "body": "A serger, also called an overlocker in many regions, uses loopers and needles to create overlocked edges. It is fast and clean for finishing seams, but it is not the all-purpose construction tool a sewing machine is."
+      },
+      {
+        "heading": "Why most beginners buy sewing first",
+        "body": "A standard sewing machine handles straight stitch, zigzag, buttonholes, zippers, topstitching, hems, and general repairs. Those are the foundation tasks for most home sewing."
+      },
+      {
+        "heading": "When a serger becomes worth it",
+        "body": "A serger becomes valuable when the buyer repeatedly sews knits, activewear, kids clothing, or garments where clean interior seams save time and improve finish."
+      },
+      {
+        "heading": "Which core tasks still require a sewing machine?",
+        "body": "A serger is excellent for trimming and finishing seam allowances, especially on knits, but it does not replace the ordinary sewing-machine tasks that many beginners need first. Zippers, buttonholes, topstitching, precise repairs, hems that require a visible straight stitch, quilting, and many alterations still rely on sewing-machine functions. Brother and SINGER both present sewing machines and serger/overlock options as separate categories, which reflects the practical difference. A buyer who owns no machine should start with the sewing machine unless the only recurring task is finishing seams on knit garments."
+      },
+      {
+        "heading": "When does a serger become the next useful purchase?",
+        "body": "A serger becomes useful when the buyer repeatedly sews knit garments, wants faster seam finishing, or dislikes raw woven seam allowances. It can make stretch seams cleaner and more durable, but it also adds threading, knife use, tension management, and maintenance. Brother’s fabric/thread/needle guidance still applies because skipped stitches and thread breaks can result from material mismatch even on the right machine. The practical sequence is sewing machine first for construction, then serger when seam finishing or knit production is frequent enough to justify a specialized tool."
+      },
+      {
+        "heading": "What should be sewn on samples before buying a serger?",
+        "body": "Before buying a serger, sew sample seams from the fabrics that caused frustration: T-shirt knit, sweater knit, lightweight woven, fraying fabric, or activewear stretch. Compare whether the problem is seam finish, seam stretch, speed, or construction steps that still require a sewing machine. Brother’s needle and thread guidance remains relevant because the wrong needle can create skipped stitches on knits even when the machine class is correct. A serger is a strong add-on when the sample problem is seam finishing; it is not the fix for zipper insertion, buttonholes, or topstitching."
+      }
+    ]
+  },
+  "sewing-machine-for-quilting": {
+    "sections": [
+      {
+        "heading": "Quilting is fabric-management heavy",
+        "body": "The machine must move multiple layers: quilt top, batting, and backing. A machine with many decorative stitches can still be frustrating if the throat is cramped or the feed is inconsistent."
+      },
+      {
+        "heading": "Longarm is a separate decision",
+        "body": "A domestic sewing machine can piece quilts and quilt small projects. A longarm system is designed for larger quilting work where the quilt is managed on a frame rather than forced through a domestic throat."
+      },
+      {
+        "heading": "Embroidery is not quilting capability",
+        "body": "Embroidery can decorate quilt blocks, but it does not replace throat space, walking-foot support, extension tables, or free-motion control."
+      },
+      {
+        "heading": "What quilting measurement matters before decorative stitches?",
+        "body": "Throat space, table support, walking-foot compatibility, and feed control affect quilting comfort more than decorative stitch count. A quilter must manage the quilt top, batting, and backing at the same time, so the available harp area and surrounding support determine how much fabric has to be wrestled. Brother’s CS7000X product information gives a domestic quilting reference with a wide table and quilting features, while longarm manufacturers separate frame-based quilting machines into a different category. The buyer should measure the largest quilt they expect to maneuver and decide whether they are piecing, quilting small projects, or trying to finish bed-size quilts on the same machine."
+      },
+      {
+        "heading": "When should a quilter consider longarm separately?",
+        "body": "A domestic sewing machine can piece quilts, attach binding, and quilt small or moderate projects. A longarm is a separate decision when quilt size, quilting frequency, or paid work makes the domestic throat and table setup the bottleneck. Handi Quilter’s product pages give concrete longarm references, including 15-inch and 20-inch machine classes, while Brother and other domestic machines remain more versatile for general sewing. The practical buyer question is whether the problem is stitch variety or physical quilt management. If the quilt cannot be handled comfortably, more decorative stitches will not solve the core limitation."
+      },
+      {
+        "heading": "What accessories matter if the machine is kept domestic?",
+        "body": "If the buyer stays with a domestic quilting setup, accessories can change comfort more than another decorative stitch menu. A walking foot or even-feed foot helps move quilt layers, a quarter-inch foot supports piecing accuracy, an extension table supports fabric weight, and quilting needles reduce thread or fabric problems. Brother’s CS7000X page gives an example of a domestic machine positioned with quilting features and a wide table. Those details help separate a useful quilting setup from a general machine that technically sews but makes fabric management difficult."
+      }
+    ]
+  },
+  "sewing-machine-maintenance": {
+    "sections": [
+      {
+        "heading": "Needle replacement is maintenance",
+        "body": "Many stitch problems are caused by worn, bent, or wrong needles. Replacing the needle is lower-cost, fast, and should happen before assuming the machine needs repair."
+      },
+      {
+        "heading": "Lint builds up invisibly",
+        "body": "Fuzzy fabric, thread, and batting can leave lint around the bobbin case and feed area. Cleaning visible lint helps prevent feed and stitch issues."
+      },
+      {
+        "heading": "Manuals matter for oiling",
+        "body": "Older machines may require oiling; many modern machines are not user-oiled in the same way. The buyer should follow the exact model manual rather than generic internet advice."
+      },
+      {
+        "heading": "What maintenance should happen before service is blamed?",
+        "body": "Start with the simple checks that manuals and support pages repeatedly point users toward: replace the needle, rethread the upper thread path, reinsert the bobbin correctly, remove lint from the bobbin area, and confirm the needle and thread match the fabric. Brother’s fabric/thread/needle guidance shows that wrong combinations can create skipped stitches and thread breaks that look like machine failure. Support resources also separate user maintenance from service work. If a problem started after a fabric, thread, or needle change, restore a known-good combination before assuming timing or tension needs professional adjustment."
+      },
+      {
+        "heading": "When should oiling or internal adjustment be avoided?",
+        "body": "Do not oil a modern machine unless the model manual gives a specific oiling point and schedule. Some machines are designed for user oiling in certain areas; others direct owners to service technicians. Janome and Brother support resources route owners to manuals, troubleshooting, and service help, which matters because oil in the wrong place can attract lint or damage parts. Internal timing, electrical issues, persistent needle strikes, grinding noises, or repeated skipped stitches after correct setup should move the buyer toward authorized service rather than random adjustment. Maintenance is about controlled cleaning and correct consumables, not guessing inside the machine."
+      },
+      {
+        "heading": "What maintenance log should owners keep?",
+        "body": "A simple maintenance log helps distinguish user setup issues from service problems. Record the needle type and size, thread brand and weight, fabric, bobbin type, cleaning date, and the symptom observed. Brother’s guidance on fabric, thread, and needle combinations gives a reason to track those variables, because many stitch problems begin with a mismatch. If the same symptom appears across fresh needles, correct threading, a clean bobbin area, and multiple fabrics, the owner has better evidence for a technician than a vague report that the machine is not sewing correctly."
+      }
+    ]
+  }
+};
+
+for (const [slug, update] of Object.entries(stephRemainingBlockerFixes)) {
   const page = researchPages.find((item) => item.slug === slug);
   if (page) Object.assign(page, update);
 }

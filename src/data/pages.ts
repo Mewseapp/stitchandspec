@@ -1515,3 +1515,308 @@ for (const [slug, update] of Object.entries(expandedGeoUpdates)) {
   const page = researchPages.find((item) => item.slug === slug);
   if (page) Object.assign(page, update);
 }
+
+
+const postDelegationSourceBackfill: Record<string, Partial<ResearchPage>> = {
+  "best-sewing-machine-for-bag-making": {
+    "sources": [
+      {
+        "label": "Brother CS7000X product page: 70 stitches, wide table, free arm, quilting features",
+        "url": "https://www.brother-usa.com/products/cs7000x"
+      },
+      {
+        "label": "SINGER Heavy Duty 4452 product specifications: heavy-duty frame, 32 stitches, up to 1,100 stitches per minute",
+        "url": "https://www.singer.com/products/singer-heavy-duty-4452-sewing-machine"
+      },
+      {
+        "label": "Janome HD-3000 product page: mechanical heavy-duty machine, aluminum frame, 18 stitches",
+        "url": "https://www.janome.com/product/hd-3000/"
+      },
+      {
+        "label": "JUKI TL-2010Q product page: semi-professional straight-stitch machine for heavy-weight fabrics and multiple layers",
+        "url": "https://www.juki.co.jp/household_en/products/list/semipro/tl2010q.html"
+      },
+      {
+        "label": "Sailrite Fabricator: full-size industrial straight-stitch compound walking-foot machine",
+        "url": "https://www.sailrite.com/fabricator/"
+      },
+      {
+        "label": "Sailrite Standard Fabricator package/spec page",
+        "url": "https://www.sailrite.com/Sailrite-Fabricator-Sewing-Machine-in-Power-Stand-with-Workhorse-Servo-Motor-Kit"
+      }
+    ]
+  },
+  "automatic-vs-computerized-sewing-machine": {
+    "sources": [
+      {
+        "label": "Brother computerized sewing machines category: computerized-machine positioning",
+        "url": "https://www.brother-usa.com/home/sewing-embroidery/computerized-sewing-machines"
+      },
+      {
+        "label": "Brother CS7000X product page: LCD display, speed control, 70 stitches, 7 one-step buttonholes",
+        "url": "https://www.brother-usa.com/products/cs7000x"
+      },
+      {
+        "label": "Brother SM3701 product page: 37 stitches, automatic needle threading, one-step buttonhole",
+        "url": "https://www.brother-usa.com/products/sm3701"
+      },
+      {
+        "label": "SINGER M1500 product page: preset stitch length/width and four-step buttonhole",
+        "url": "https://www.singer.com/products/singer-m1500-sewing-machine-br"
+      },
+      {
+        "label": "SINGER Heavy Duty 4452 product page: mechanical heavy-duty reference with automatic needle threader and one-step buttonhole",
+        "url": "https://www.singer.com/products/singer-heavy-duty-4452-sewing-machine"
+      },
+      {
+        "label": "Janome Sewist 780DC product page: computerized machine features and stitch count",
+        "url": "https://www.janome.com/product/sewist-780dc/"
+      }
+    ]
+  },
+  "best-machine-for-cosplay": {
+    "sources": [
+      {
+        "label": "Brother SE700 product page: sewing/embroidery combo, 4 x 4 field, 135 designs, 103 stitches",
+        "url": "https://www.brother-usa.com/products/se700"
+      },
+      {
+        "label": "Brother SE700 support/manuals page",
+        "url": "https://support.brother.com/g/b/manualtop.aspx?c=us"
+      },
+      {
+        "label": "Brother ST150HDH product page: heavy-duty computerized sewing reference",
+        "url": "https://www.brother-usa.com/products/st150hdh"
+      },
+      {
+        "label": "Brother CS7000X product page: versatile sewing/quilting reference for costumes",
+        "url": "https://www.brother-usa.com/products/cs7000x"
+      },
+      {
+        "label": "SINGER Heavy Duty 6800C product page: computerized heavy-duty reference",
+        "url": "https://www.singer.com/products/singer-heavy-duty-6800c-sewing-machine"
+      },
+      {
+        "label": "Janome HD-3000 product page: mechanical heavy-duty reference",
+        "url": "https://www.janome.com/product/hd-3000/"
+      }
+    ]
+  },
+  "sewing-machine-for-alterations": {
+    "sources": [
+      {
+        "label": "Brother CS7000X product page: free-arm, 70 stitches, 7 one-step buttonholes",
+        "url": "https://www.brother-usa.com/products/cs7000x"
+      },
+      {
+        "label": "Brother SM3701 product page: 37 stitches, blind hem/stretch/zigzag options, free-arm class",
+        "url": "https://www.brother-usa.com/products/sm3701"
+      },
+      {
+        "label": "SINGER M1500 product page: lightweight mechanical-style repair machine reference",
+        "url": "https://www.singer.com/products/singer-m1500-sewing-machine-br"
+      },
+      {
+        "label": "SINGER Heavy Duty 4452 product page: heavy repair and jeans-hem reference",
+        "url": "https://www.singer.com/products/singer-heavy-duty-4452-sewing-machine"
+      },
+      {
+        "label": "Janome Sewist 780DC product page: computerized alteration-feature reference",
+        "url": "https://www.janome.com/product/sewist-780dc/"
+      },
+      {
+        "label": "Janome HD-3000 product page: mechanical heavy-duty alteration reference",
+        "url": "https://www.janome.com/product/hd-3000/"
+      }
+    ]
+  },
+  "embroidery-software-for-beginners": {
+    "sources": [
+      {
+        "label": "Brother PE-DESIGN 11 product page: digitizing software, built-in designs, PhotoStitch, ScanNCut workflow",
+        "url": "https://www.brother-usa.com/products/pedesign11"
+      },
+      {
+        "label": "Brother PE-DESIGN 11 instruction manual PDF",
+        "url": "https://download.brother.com/welcome/doch101410/ped11_im03en.pdf"
+      },
+      {
+        "label": "Hatch Embroidery trial page: 30-day trial and beginner learning path",
+        "url": "https://hatchembroidery.com/products/hatch-embroidery/trial"
+      },
+      {
+        "label": "Hatch support: embroidery machine/file compatibility",
+        "url": "https://help.hatchembroidery.com/portal/en/kb/articles/is-hatch-embroidery-compatible-with-my-embroidery-machine"
+      },
+      {
+        "label": "Hatch support: read/write file formats",
+        "url": "https://help.hatchembroidery.com/portal/en/kb/articles/what-file-formats-does-hatch-embroidery-v2-v3-read-and-write"
+      },
+      {
+        "label": "Brother Artspira creative app overview",
+        "url": "https://www.brother-usa.com/home/sewing-embroidery/artspira"
+      }
+    ]
+  },
+  "embroidery-file-formats": {
+    "sources": [
+      {
+        "label": "Brother Design Database Transfer support: PES, PHC, PHX, DST preview/transfer context",
+        "url": "https://support.brother.com/g/s/hf/pcapp_info/ddt/en/index.html?prod=WLAN"
+      },
+      {
+        "label": "Brother Design Database Transfer manual PDF",
+        "url": "https://download.brother.com/welcome/doch102286/ddt_im01en.pdf"
+      },
+      {
+        "label": "Brother PE-DESIGN 11 instruction manual PDF",
+        "url": "https://download.brother.com/welcome/doch101410/ped11_im03en.pdf"
+      },
+      {
+        "label": "Janome embroidery formats page: JEF and Janome stitch-data explanation",
+        "url": "https://www.janome.com/create-learn/janome-embroidery-formats/"
+      },
+      {
+        "label": "Hatch supported read/write file formats",
+        "url": "https://help.hatchembroidery.com/portal/en/kb/articles/what-file-formats-does-hatch-embroidery-v2-v3-read-and-write"
+      },
+      {
+        "label": "OESD explanation of BERNINA EXP design package files",
+        "url": "https://oesd.com/exp-formats-for-bernina/"
+      }
+    ]
+  },
+  "embroidery-thread-types": {
+    "sources": [
+      {
+        "label": "Madeira Polyneon polyester machine embroidery thread",
+        "url": "https://www.madeirausa.com/polyneon/"
+      },
+      {
+        "label": "Madeira Classic Rayon embroidery thread",
+        "url": "https://www.madeirausa.com/classic-rayon/"
+      },
+      {
+        "label": "Madeira Metallic embroidery thread",
+        "url": "https://www.madeirausa.com/metallic/"
+      },
+      {
+        "label": "Sew Madeira: choosing the right machine embroidery thread",
+        "url": "https://sewmadeira.com/choosing-the-right-thread"
+      },
+      {
+        "label": "Sulky thread and needle guide PDF",
+        "url": "https://blog.sulky.com/wp-content/uploads/2015/01/Thread-and-Needle-Guide.pdf"
+      },
+      {
+        "label": "Brother fabric, thread, and needle matching guidance",
+        "url": "https://help.brother-usa.com/app/answers/detail/a_id/144041/~/combination-of-fabric,-thread,-and-needle-to-use"
+      }
+    ]
+  },
+  "longarm-vs-domestic-quilting-machine": {
+    "sources": [
+      {
+        "label": "Brother PQ1600S product page: domestic quilting machine throat/table reference",
+        "url": "https://www.brother-usa.com/products/pq1600s"
+      },
+      {
+        "label": "Brother support: sewing area of the machine",
+        "url": "https://help.brother-usa.com/app/answers/detail/a_id/186573/~/sewing-area-of-the-machine"
+      },
+      {
+        "label": "Janome Continental M7 product page: large domestic throat reference",
+        "url": "https://www.janome.com/product/continental-m7-professional/"
+      },
+      {
+        "label": "Janome Quilt Maker Pro 18 Versa page: 18-inch longarm reference",
+        "url": "https://www.janome.com/product/quilt-maker-pro-18-versa/"
+      },
+      {
+        "label": "Handi Quilter Amara 20 page: 20-inch longarm and frame options",
+        "url": "https://handiquilter.com/product/hq-amara-20/"
+      },
+      {
+        "label": "Handi Quilter Moxie page: 15-inch longarm and frame options",
+        "url": "https://handiquilter.com/product/hq-moxie-15-quilt-machine/"
+      },
+      {
+        "label": "Handi Quilter machine comparison chart",
+        "url": "https://handiquilter.com/compare/hq-machine-comparison/"
+      }
+    ]
+  },
+  "used-vs-new-sewing-machine": {
+    "sources": [
+      {
+        "label": "Brother standard warranty information",
+        "url": "https://www.brother-usa.com/warranty-information"
+      },
+      {
+        "label": "Brother limited warranty PDF: authorized reseller and used-product coverage language",
+        "url": "https://www.brother-usa.com/-/media/brother/product-catalog-media/documents/2023/04/04/17/40/brother-limited-warranty-standard.pdf"
+      },
+      {
+        "label": "Brother 25-year warranty coverage support article",
+        "url": "https://help.brother-usa.com/app/answers/detail/a_id/54556/~/coverage-under-the-25-year-warranty"
+      },
+      {
+        "label": "Janome warranty page",
+        "url": "https://www.janome.com/support/warranty/"
+      },
+      {
+        "label": "JUKI product registration/warranty page",
+        "url": "https://www.jukihome.com/warranty"
+      },
+      {
+        "label": "Baby Lock warranty policy",
+        "url": "https://babylock.com/warranty-policy"
+      },
+      {
+        "label": "Quality Sewing pre-owned/open-box machine collection",
+        "url": "https://www.qualitysewing.com/collections/sewing-machines-pre-owned-open-box-machines"
+      }
+    ]
+  },
+  "sewing-machine-warranty-and-service": {
+    "sources": [
+      {
+        "label": "Brother warranty information",
+        "url": "https://www.brother-usa.com/warranty-information"
+      },
+      {
+        "label": "Brother 25-year warranty coverage support article",
+        "url": "https://help.brother-usa.com/app/answers/detail/a_id/54556/~/coverage-under-the-25-year-warranty"
+      },
+      {
+        "label": "Brother product support center",
+        "url": "https://www.brother-usa.com/brother-support/"
+      },
+      {
+        "label": "Janome warranty page",
+        "url": "https://www.janome.com/support/warranty/"
+      },
+      {
+        "label": "Janome FAQ: warranty service and authorized dealer support",
+        "url": "https://www.janome.com/support/faqs/"
+      },
+      {
+        "label": "JUKI warranty/product registration",
+        "url": "https://www.jukihome.com/warranty"
+      },
+      {
+        "label": "Handi Quilter warranty page",
+        "url": "https://handiquilter.com/warranty/"
+      },
+      {
+        "label": "SINGER sewing-machine warranty coverage",
+        "url": "https://www.singer.com/en-ca/pages/singer-sewing-machine-warranty-coverage"
+      }
+    ]
+  }
+};
+
+for (const [slug, update] of Object.entries(postDelegationSourceBackfill)) {
+  const page = researchPages.find((item) => item.slug === slug);
+  if (page) Object.assign(page, update);
+}

@@ -2,14 +2,25 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { researchPages } from '../data/pages';
 const byCluster = Object.groupBy(researchPages, (page) => page.cluster);
+const humanizeCluster = (cluster) => cluster.split('-').map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+const clusterId = (cluster) => cluster === 'beginner-buying' ? 'guides' : cluster;
 ---
 <BaseLayout title="Research Graph | Stitch & Spec">
-  <h1>Research graph</h1>
-  <p class="bluf"><strong>BLUF:</strong> The first content cluster is a 25-page buyer-question graph. Every page links to the next practical question instead of ending at a dead affiliate CTA.</p>
-  {Object.entries(byCluster).map(([cluster, pages]) => (
-    <section>
-      <h2>{cluster}</h2>
-      <ul>{pages?.map((page) => <li><a href={`/${page.slug}/`}>{page.title}</a> — {page.buyerQuestion}</li>)}</ul>
+  <article class="graph-page">
+    <header class="page-hero compact">
+      <p class="publication-kicker">Research map</p>
+      <h1>Research graph</h1>
+      <p class="lead">The first content cluster is a 25-page buyer-question graph. Every page links to the next practical question instead of ending at a dead affiliate CTA.</p>
+    </header>
+    <section class="graph-intro" aria-labelledby="graph-index-heading">
+      <h2 id="graph-index-heading">Browse by buyer decision</h2>
+      <p>Use the graph as a table of contents for project-first machine research, comparisons, materials, workflow, and upgrade-risk questions.</p>
     </section>
-  ))}
+    {Object.entries(byCluster).map(([cluster, pages]) => (
+      <section class="graph-cluster" id={clusterId(cluster)}>
+        <h2>{humanizeCluster(cluster)}</h2>
+        <ul>{pages?.map((page) => <li><a href={`/${page.slug}/`}>{page.title}</a> — {page.buyerQuestion}</li>)}</ul>
+      </section>
+    ))}
+  </article>
 </BaseLayout>

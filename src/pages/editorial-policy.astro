@@ -2,13 +2,21 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout title="Editorial Policy | Stitch & Spec">
-  <h1>Editorial policy</h1>
-  <p class="bluf"><strong>BLUF:</strong> This site is built as a citation-ready research tool, not a hype-driven affiliate blog.</p>
-  <ul>
-    <li>Every research page starts with a direct BLUF answer.</li>
-    <li>Claims should point to manufacturer documentation, retailer specifications, manuals, or clearly labeled expert sources.</li>
-    <li>Comparison tables use neutral criteria: project fit, machine limits, serviceability, and upgrade risk.</li>
-    <li>Affiliate links are stored in a data layer so merchant swaps do not rewrite editorial conclusions.</li>
-    <li>Pages carry visible last-updated dates and FAQ schema.</li>
-  </ul>
+  <article class="policy-page">
+    <header class="page-hero compact">
+      <p class="publication-kicker">Publication standards</p>
+      <h1>Editorial policy</h1>
+      <p class="lead">This site is built as a citation-ready research tool, not a hype-driven affiliate blog.</p>
+    </header>
+    <section class="policy-section">
+      <h2>How the research is held accountable</h2>
+      <ul>
+        <li>Every research page starts with a direct bottom-line answer.</li>
+        <li>Claims should point to manufacturer documentation, retailer specifications, manuals, or clearly labeled expert sources.</li>
+        <li>Comparison tables use neutral criteria: project fit, machine limits, serviceability, and upgrade risk.</li>
+        <li>Affiliate links are stored in a data layer so merchant swaps do not rewrite editorial conclusions.</li>
+        <li>Pages carry visible last-updated dates and reader-facing FAQ sections.</li>
+      </ul>
+    </section>
+  </article>
 </BaseLayout>

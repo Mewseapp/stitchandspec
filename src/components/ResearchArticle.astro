@@ -23,19 +23,19 @@ const breadcrumbSchema = {
   ]
 };
 const visualByCluster = {
-  'beginner-buying': 'Machine photo slot',
-  'embroidery-basics': 'Hoop and stabilizer diagram slot',
-  'product-comparisons': 'Side-by-side machine photo slot',
-  'materials': 'Fabric stack test photo slot',
-  'business': 'Batch workflow photo slot',
-  'projects': 'Finished project photo slot',
-  'quilting': 'Quilt throat-space photo slot',
-  'machine-types': 'Machine class photo slot',
-  'troubleshooting': 'Needle and stitch detail slot',
-  'software': 'Screen and file workflow slot',
-  'buying': 'Inspection checklist photo slot'
+  'beginner-buying': 'Machine context',
+  'embroidery-basics': 'Hoop and stabilizer notes',
+  'product-comparisons': 'Side-by-side comparison',
+  'materials': 'Fabric stack test',
+  'business': 'Batch workflow',
+  'projects': 'Finished project reference',
+  'quilting': 'Throat-space reference',
+  'machine-types': 'Machine class reference',
+  'troubleshooting': 'Needle and stitch detail',
+  'software': 'Screen and file workflow',
+  'buying': 'Inspection checklist'
 };
-const visualLabel = visualByCluster[page.cluster] || 'Machine research photo slot';
+const visualLabel = visualByCluster[page.cluster] || 'Machine research reference';
 ---
 <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
@@ -46,11 +46,11 @@ const visualLabel = visualByCluster[page.cluster] || 'Machine research photo slo
       <p class="article-meta">{page.cluster.replaceAll('-', ' ')} · Last updated {page.lastUpdated}</p>
       <h1>{page.title}</h1>
       <section class="bluf" aria-label="Direct answer">
-        <strong>BLUF</strong>
+        <strong>Bottom line</strong>
         <p>{page.bluf}</p>
       </section>
     </div>
-    <figure class="image-slot article-image-slot" aria-label={`${visualLabel} placeholder`}>
+    <figure class="image-slot article-image-slot" aria-label={visualLabel}>
       <div class="slot-stage compact-stage">
         <span class="slot-badge">{visualLabel}</span>
         <span class="machine-block machine-arm"></span>
@@ -58,7 +58,7 @@ const visualLabel = visualByCluster[page.cluster] || 'Machine research photo slo
         <span class="machine-block hoop-window"></span>
         <span class="stitch-path"></span>
       </div>
-      <figcaption>{visualLabel}. Add a real product, hoop, fabric, or workflow image here.</figcaption>
+      <figcaption>{visualLabel}</figcaption>
     </figure>
   </header>
 
@@ -113,10 +113,10 @@ const visualLabel = visualByCluster[page.cluster] || 'Machine research photo slo
           {section.bullets && <ul>{section.bullets.map((bullet) => <li>{bullet}</li>)}</ul>}
         </div>
         {index === 0 && (
-          <figure class="image-slot inline-image-slot" aria-label="Inline supporting image placeholder">
-            <span class="slot-badge">Supporting image slot</span>
+          <figure class="image-slot inline-image-slot" aria-label="Supporting note">
+            <span class="slot-badge">Supporting note</span>
             <span class="inline-thread"></span>
-            <figcaption>Use for a machine detail, fabric test, hoop setup, or annotated diagram.</figcaption>
+            <figcaption>Supporting machine, fabric, hoop, or workflow note.</figcaption>
           </figure>
         )}
       </section>

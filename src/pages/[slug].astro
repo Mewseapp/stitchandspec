@@ -7,6 +7,6 @@ export function getStaticPaths() {
 }
 const { page } = Astro.props;
 ---
-<BaseLayout title={`${page.title} | Stitch & Spec`} description={page.bluf}>
+<BaseLayout title={`${page.title} | Stitch & Spec`} description={page.bluf} ogType="article">
   <ResearchArticle page={page} />
 </BaseLayout>

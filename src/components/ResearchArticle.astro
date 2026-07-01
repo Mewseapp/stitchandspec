@@ -1,8 +1,50 @@
 ---
 import AffiliateProductList from './AffiliateProductList.astro';
 import { products } from '../data/affiliates';
+import { researchPages } from '../data/pages';
 
 const { page } = Astro.props;
+const relatedLinkTargetsByRoute = {
+  '/best-sewing-embroidery-machine-for-beginners/': '/brother-se700-vs-se2000/',
+  '/embroidery-hoop-size-explained/': '/brother-se700-vs-se2000/',
+  '/brother-se700-vs-se2000/': '/best-sewing-embroidery-machine-for-beginners/',
+  '/sewing-machine-for-denim-and-canvas/': '/industrial-vs-domestic-sewing-machine/',
+  '/embroidery-machine-for-small-business/': '/embroidery-machine-for-hats/',
+  '/what-supplies-do-you-need-for-machine-embroidery/': '/embroidery-stabilizer-guide/',
+  '/embroidery-machine-for-shirts/': '/embroidery-hoop-size-explained/',
+  '/embroidery-machine-for-hats/': '/embroidery-machine-for-small-business/',
+  '/sewing-machine-for-quilting/': '/longarm-vs-domestic-quilting-machine/',
+  '/longarm-vs-domestic-quilting-machine/': '/sewing-machine-for-quilting/',
+  '/serger-vs-sewing-machine/': '/coverstitch-vs-serger/',
+  '/coverstitch-vs-serger/': '/serger-vs-sewing-machine/',
+  '/industrial-vs-domestic-sewing-machine/': '/sewing-machine-for-denim-and-canvas/',
+  '/sewing-machine-needle-sizes/': '/sewing-machine-for-denim-and-canvas/',
+  '/embroidery-stabilizer-guide/': '/what-supplies-do-you-need-for-machine-embroidery/',
+  '/embroidery-thread-types/': '/what-supplies-do-you-need-for-machine-embroidery/',
+  '/embroidery-software-for-beginners/': '/embroidery-file-formats/',
+  '/embroidery-file-formats/': '/embroidery-software-for-beginners/',
+  '/best-sewing-machine-for-bag-making/': '/industrial-vs-domestic-sewing-machine/',
+  '/best-machine-for-cosplay/': '/serger-vs-sewing-machine/',
+  '/sewing-machine-for-alterations/': '/automatic-vs-computerized-sewing-machine/',
+  '/automatic-vs-computerized-sewing-machine/': '/sewing-machine-for-alterations/',
+  '/sewing-machine-maintenance/': '/sewing-machine-warranty-and-service/',
+  '/used-vs-new-sewing-machine/': '/sewing-machine-warranty-and-service/',
+  '/sewing-machine-warranty-and-service/': '/used-vs-new-sewing-machine/'
+};
+const routeForSlug = (slug) => `/${slug}/`;
+const currentRoute = routeForSlug(page.slug);
+const relatedTargetRoute = relatedLinkTargetsByRoute[currentRoute];
+const existingInternalRoutes = new Set(page.nextQuestions.map(routeForSlug));
+const relatedTargetPage = relatedTargetRoute
+  ? researchPages.find((item) => routeForSlug(item.slug) === relatedTargetRoute)
+  : undefined;
+const relatedLink = relatedTargetPage && !existingInternalRoutes.has(relatedTargetRoute)
+  ? {
+      label: relatedTargetPage.intent === 'compare' ? 'Related comparison' : 'Related guide',
+      route: relatedTargetRoute,
+      title: relatedTargetPage.title
+    }
+  : null;
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -12,10 +54,29 @@ const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
   headline: page.title,
+  description: page.bluf,
   dateModified: page.lastUpdated,
   about: page.buyerQuestion,
+  author: { '@type': 'Organization', name: 'Stitch & Spec' },
+  publisher: { '@type': 'Organization', name: 'Stitch & Spec' },
   mainEntityOfPage: Astro.url.href
 };
+const comparisonSchema = page.intent === 'compare' && page.table ? {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: `${page.title} comparison factors`,
+  itemListOrder: 'https://schema.org/ItemListOrderAscending',
+  numberOfItems: page.table.rows.length,
+  itemListElement: page.table.rows.map((row, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    item: {
+      '@type': 'Thing',
+      name: row[0],
+      description: page.table.columns.map((column, columnIndex) => `${column}: ${row[columnIndex]}`).join('; ')
+    }
+  }))
+} : null;
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
@@ -52,6 +113,7 @@ const visualLabel = visualByCluster[page.cluster] || 'Machine research reference
 ---
 <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+{comparisonSchema && <script type="application/ld+json" set:html={JSON.stringify(comparisonSchema)} />}
 <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 <article class="research-page">
   <header class="article-hero">
@@ -135,6 +197,13 @@ const visualLabel = visualByCluster[page.cluster] || 'Machine research reference
       {page.nextQuestions.map((slug) => <a class="next-link" href={`/${slug}/`}>{slug.replaceAll('-', ' ')}</a>)}
     </div>
   </section>
+
+  {relatedLink && (
+    <section class="content-panel related-card" aria-label={relatedLink.label}>
+      <span class="section-label">{relatedLink.label}</span>
+      <p><a href={relatedLink.route}>{relatedLink.title}</a></p>
+    </section>
+  )}
 
   <section class="content-panel source-card">
     <h2>Sources used</h2>

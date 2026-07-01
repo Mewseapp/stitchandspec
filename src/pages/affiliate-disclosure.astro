@@ -1,7 +1,28 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+const siteUrl = Astro.site || 'https://stitchandspec.com';
+const disclosureUrl = new URL('/affiliate-disclosure/', siteUrl).toString();
+const disclosureDescription = 'Affiliate availability does not determine Stitch & Spec recommendations or machine coverage.';
+const disclosureJsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'Affiliate disclosure',
+    description: disclosureDescription,
+    url: disclosureUrl,
+    isPartOf: { '@type': 'WebSite', name: 'Stitch & Spec', url: new URL('/', siteUrl).toString() }
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: new URL('/', siteUrl).toString() },
+      { '@type': 'ListItem', position: 2, name: 'Affiliate disclosure', item: disclosureUrl }
+    ]
+  }
+];
 ---
-<BaseLayout title="Affiliate Disclosure | Stitch & Spec">
+<BaseLayout title="Affiliate Disclosure | Stitch & Spec" description={disclosureDescription} jsonLd={disclosureJsonLd}>
   <article class="policy-page">
     <header class="page-hero compact">
       <p class="publication-kicker">Reader transparency</p>

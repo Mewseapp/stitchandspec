@@ -1,9 +1,31 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+const siteUrl = Astro.site || 'https://stitchandspec.com';
+const aboutUrl = new URL('/about/', siteUrl).toString();
+const aboutDescription = 'Stitch & Spec helps sewing and embroidery buyers choose machines around the projects they actually plan to make.';
+const aboutJsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    name: 'About Stitch & Spec',
+    description: aboutDescription,
+    url: aboutUrl,
+    isPartOf: { '@type': 'WebSite', name: 'Stitch & Spec', url: new URL('/', siteUrl).toString() }
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: new URL('/', siteUrl).toString() },
+      { '@type': 'ListItem', position: 2, name: 'About', item: aboutUrl }
+    ]
+  }
+];
 ---
 <BaseLayout
   title="About | Stitch & Spec"
-  description="Stitch & Spec is an independent research publication that maps sewing and embroidery buyer questions to machine specifications, manufacturer documentation, and retailer data."
+  description={aboutDescription}
+  jsonLd={aboutJsonLd}
 >
   <article class="trust-page">
     <header class="trust-hero">

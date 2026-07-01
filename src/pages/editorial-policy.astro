@@ -1,7 +1,28 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+const siteUrl = Astro.site || 'https://stitchandspec.com';
+const policyUrl = new URL('/editorial-policy/', siteUrl).toString();
+const policyDescription = 'Editorial standards for sourced Stitch & Spec sewing and embroidery machine guidance.';
+const policyJsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'Editorial policy',
+    description: policyDescription,
+    url: policyUrl,
+    isPartOf: { '@type': 'WebSite', name: 'Stitch & Spec', url: new URL('/', siteUrl).toString() }
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: new URL('/', siteUrl).toString() },
+      { '@type': 'ListItem', position: 2, name: 'Editorial policy', item: policyUrl }
+    ]
+  }
+];
 ---
-<BaseLayout title="Editorial Policy | Stitch & Spec">
+<BaseLayout title="Editorial Policy | Stitch & Spec" description={policyDescription} jsonLd={policyJsonLd}>
   <article class="policy-page">
     <header class="page-hero compact">
       <p class="publication-kicker">Publication standards</p>

@@ -1,7 +1,13 @@
 ---
 import '../styles/global.css';
-const { title, description = 'Neutral, citation-ready sewing and embroidery machine research.' } = Astro.props;
+const {
+  title,
+  description = 'Neutral, citation-ready sewing and embroidery machine research.',
+  jsonLd = [],
+  ogType = 'website'
+} = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site || 'https://stitchandspec.com').toString();
+const schemaBlocks = Array.isArray(jsonLd) ? jsonLd.filter(Boolean) : [jsonLd].filter(Boolean);
 ---
 <!doctype html>
 <html lang="en">
@@ -10,8 +16,14 @@ const canonical = new URL(Astro.url.pathname, Astro.site || 'https://stitchandsp
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="deployment-check" content="steph-phase-fixes-2026-06-25-v9" />
+    <meta name="deployment-check" content="steph-phase-fixes-2026-06-25-v10" />
     <link rel="canonical" href={canonical} />
+    <meta property="og:site_name" content="Stitch &amp; Spec" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={canonical} />
+    {schemaBlocks.map((schema) => <script type="application/ld+json" set:html={JSON.stringify(schema)} />)}
   </head>
   <body>
     <header class="site-header">

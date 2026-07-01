@@ -35,8 +35,28 @@ const categoryTone = (cluster = '') => {
   if (cluster.includes('embroidery') || cluster.includes('software')) return 'mechanics';
   return 'evergreen';
 };
+const siteUrl = Astro.site || 'https://stitchandspec.com';
+const homeUrl = new URL('/', siteUrl).toString();
+const homeDescription = 'Research-backed sewing and embroidery machine guides for buyers choosing by project, hoop size, fabric handling, workflow, and upgrade risk.';
+const homeJsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Stitch & Spec',
+    url: homeUrl,
+    description: homeDescription
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Stitch & Spec',
+    url: homeUrl,
+    description: homeDescription,
+    inLanguage: 'en'
+  }
+];
 ---
-<BaseLayout title="Stitch & Spec | Sewing and Embroidery Machine Research" description="Research-backed sewing and embroidery machine guides for buyers choosing by project, hoop size, fabric handling, workflow, and upgrade risk.">
+<BaseLayout title="Stitch & Spec | Sewing and Embroidery Machine Research" description={homeDescription} jsonLd={homeJsonLd}>
   <section class="home-rebuild" aria-labelledby="home-title">
     <div class="hero-masthead">
       <p class="publication-kicker">Stitch &amp; Spec — Independent Sewing &amp; Embroidery Machine Research</p>
